@@ -1,0 +1,175 @@
+.wrap{
+    width: 100%;
+    /* overflow: hidden; */
+}
+.middle{
+    width: 100%;
+    height: 100%;
+}
+.middle-con{
+    padding-top:30px;
+    width: 1220px;
+    margin: auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+.bottom-detection{
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+.column-wrap{
+    width: 220px;
+    margin-right: 24px;
+    float: left;
+}
+.item-wrap{
+    width: 220px;
+    box-shadow: 0 0 18px 0 rgba(0,0,0,.05);
+    margin-bottom: 24px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    transition: all 1s;
+}
+.item-wrap:hover{
+    top: -10px;
+}
+.column-wrap .item-more a{
+    padding-bottom: 12px;
+}
+.item-more-bottom{
+    padding: 0 14px;
+    margin-top: 10px;
+}
+.item-more-bottom-right{
+    float: left;
+}
+.item-more-bottom-left{
+    float: left;
+    margin-right: 10px;
+}
+.column-wrap img{
+    width: 220px;
+}
+.column-wrap .imgg{
+    width: 34.5px;
+    height: 34.5px;
+}
+.column-wrap-middle-top{
+    position: absolute;
+    left: 245px;
+}
+.column-wrap-middle-topT{
+    width: 710px;
+    height: 750px;
+    margin-bottom: 24px;
+    border-radius: 10px;
+    background-color: #eee;
+    overflow: hidden;
+}
+.column-wrap-middle-topB{
+   box-shadow:0 0 18px 0 rgba(0,0,0,.05);
+   border-radius: 10px;
+   overflow: hidden;
+}
+.column-wrap-middle-topB1{
+    width: 710px;
+}
+.column-wrap-middle-topB1-bg{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding-left: 12px;
+    background-image: url("https://s10.mogucdn.com/mlcdn/c45406/190510_0le9efkb3achg8hkif3dd116e7j0f_1420x1113.gif");
+    height: 279px;
+}
+.column-wrap-middle-topB1-bg a{
+    display: block;
+    height: 55px;
+}
+.box{
+    display: block;
+    width: 112px;
+    height: 112px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    text-align: center;
+    float: left;
+    background-image: url("https://s10.mogucdn.com/mlcdn/c45406/190508_4e707776i7k42lcg71lije9dj78kg_172x172.png");
+}
+.box:nth-child(3){
+    background-image: url("https://s10.mogucdn.com/mlcdn/c45406/190509_330e6di9i5j0ljc5dcbk4b50ld14b_224x224.png");
+}
+.box:nth-child(4){
+    background-image: url("https://s10.mogucdn.com/mlcdn/c45406/190611_14e56ajh2019d4k4ci8693b7k423j_224x224.jpg");
+}
+.box:nth-child(5){
+    background-image: url("https://s10.mogucdn.com/mlcdn/c45406/181031_56ldahcgfcb306ieceh0f36edga0k_172x172.png");
+}
+.box:nth-child(6){
+    background-image: url("https://s10.mogucdn.com/mlcdn/c45406/190509_6l3eg395ig7f347b2c41jdidha119_224x224.png");
+}
+.box:nth-child(7){
+    background-image: url("https://s10.mogucdn.com/mlcdn/c45406/181031_1fa6a0aj703ek9g6kkc5ek5495ke1_172x172.png");
+}
+.box:nth-child(8){
+    background-image: url("https://s10.mogucdn.com/mlcdn/c45406/181031_75gbbae792188710cgb83bd3j1fhj_172x172.png");
+}
+.box:nth-child(9){
+    background-image: url("https://s10.mogucdn.com/mlcdn/c45406/190509_524f84905d4c13i4g331ca5hbde70_224x224.png");
+}
+.box:nth-child(10){
+    background-image: url("https://s10.mogucdn.com/mlcdn/c45406/181031_5i7idgb59209bhkflgc4j9c4cb87b_172x172.png");
+}
+.box:nth-child(11){
+    background-image: url("https://s10.mogucdn.com/mlcdn/c45406/190509_00k5281fjj1eh85779465k5j27b0d_224x224.png");
+}
+.box:nth-child(12){
+    background-image: url("https://s10.mogucdn.com/mlcdn/c45406/181031_7i219f47fc0ki19f58k5di58f8ae7_172x172.png");
+}
+.box:nth-child(13){
+    background-image: url("https://s10.mogucdn.com/mlcdn/c45406/181031_7cjhfbac3bi1lbaf7i9kdbj82fbkc_172x172.png");
+}
+.cate-item-name{
+    font-size: 14px;
+    color: #333;
+    margin-top: 75px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.column-wrap-middle-topB1-btn{
+    width: 100%;
+    background-size: 100%;
+    overflow: hidden;
+    padding-bottom: 6px;
+}
+.btn-topB1{
+    font-size: 14px;
+    width: 120px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    float: left;
+    border-radius: 22px;
+    margin-left: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 14px;
+    color: rgb(51, 51, 51);
+    background-color: rgb(245, 245, 245);
+}
+.btn-topB1 span{
+    position: relative;
+}

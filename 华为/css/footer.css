@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+#footer {
+    background: #f9f9f9;
+    width: 100%;
+    min-width: 1200px;
+    margin-top: 100px;
+    min-height: 396px;
+}
+
+.slogan {
+    padding: 22px 0 20px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.slogan ul:before,
+.slogan ul:after {
+    content: "";
+    display: table;
+}
+
+.slogan ul:before,
+.slogan ul:after {
+    content: "";
+    display: table;
+}
+
+.slogan li {
+    display: table-cell;
+    font-size: 18px;
+    color: #333;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+a {
+    cursor: pointer;
+    color: #3a3a3a;
+}
+
+.slogan li:first-child {
+    padding-right: 100px;
+}
+
+.slogan .s1 i {
+    background-position: 0 -150px;
+}
+
+.slogan li i {
+    display: inline-block;
+    vertical-align: middle;
+    width: 47px;
+    height: 47px;
+    margin-right: 15px;
+    background: url(../img/icon-common.png) no-repeat;
+}
+
+.slogan li:first-child+li {
+    padding-right: 100px;
+}
+
+.slogan .s2 i {
+    background-position: -46px -150px;
+}
+
+.slogan .s3 i {
+    background-position: -93px -150px;
+}
+
+.slogan li:first-child+li+li {
+    padding-right: 100px;
+}
+
+.slogan .s4 i {
+    background-position: -93px -150px;
+}
+
+.service-container {
+    background: #f9f9f9;
+    width: 100%;
+    min-width: 1200px;
+}
+
+.service {
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 23px 0 24px;
+    width: 1200px;
+    margin: 0 auto;
+    height: 155px;
+}
+
+.service:before,
+.service:after {
+    content: "";
+    display: table;
+}
+
+.service-l {
+    width: 920px;
+    height: 155px;
+    padding-top: 5px;
+    border-right: 1px solid #e5e5e5;
+}
+
+
+/* .fl {
+    float: left;
+} */
+
+.service .service-l dl {
+    width: 16.66667%;
+}
+
+.service dl {
+    float: left;
+}
+
+.service dt {
+    font-size: 14px;
+    color: #3a3a3a;
+}
+
+.service-container .title {
+    font-size: 14px!important;
+    padding-bottom: 7px;
+    color: #333;
+    display: block;
+    border-left: none;
+    padding-left: 0;
+    line-height: 1.5!important;
+    margin-bottom: 0!important;
+}
+
+.service dd li {
+    line-height: 22px;
+    color: #777;
+}
+
+dd a {
+    color: #777;
+    font-size: 12px;
+}
+
+.service dd a:hover {
+    color: #ca141d;
+}
+
+
+/* 右边 */
+
+.service-r {
+    width: 279px;
+    min-height: 160px;
+    margin-top: 2px;
+    text-align: center;
+    float: right;
+    /* margin-top: -165px; */
+}
+
+.service-r .s7 {
+    width: 279px;
+}
+
+.service dl.s7 .title {
+    font-size: 24px!important;
+    padding: 0;
+    line-height: 24px;
+}
+
+.s7 a {
+    color: #575757;
+}
+.service-r .kefu>a{
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 34px;
+    margin: 0 auto;
+    border-radius: 20px;
+    background: rgba(51,51,51,1);
+    color: #fff;
+    margin-top: 10px;
+}
+.service-r .kefu>a:hover{
+    background: rgba(51, 51, 51, 0.8);
+    color: #fff;
+}
+.service-r .kefu>a img{
+    margin-right: 15px;
+}
+.service-r .service-code{
+    float: left;
+    width: 250px;
+    margin-top: 26px;
+    margin-left: 40px;
+}
+.service-code h2{
+    font-size: 14px;
+    color: #333;
+    float: left;
+}
+.service-code ul{
+    float: left;
+    margin-left: 3px;
+}
+.service-code ul::before{
+    content: "";
+    display: table;
+}
+.service-code ul li:nth-of-type(1){
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    float: left;
+    position: relative;
+}
+.service-code ul li:nth-of-type(1):hover i{
+    color: #666;
+}
+.service-code ul li:nth-of-type(1) .wx_hide{
+    position: absolute;
+    top: 26px;
+    left: 50%;
+    margin-left: -54px;
+    width: 108px;
+    height: 108px;
+    display: none
+}
+.service-code ul li:hover .wx_hide{
+    display: block;
+}
+.service-code ul li:nth-of-type(1) .wx_hide img{
+    width: 100%;
+    height: 100%;
+}
+.service-code ul li:nth-of-type(2){
+    float: left;
+    width:105px;
+    height: 24px;
+}
+.service-code ul li:nth-of-type(2) img{
+    width: 80%;
+    height: 80%;
+    margin-top: 2%;
+}
+
+/* 最下面 */
+
+.footer-container {
+    background: #f9f9f9;
+    width: 100%;
+    min-width: 1200px;
+    height: 103px;
+}
+
+.last_foot {
+    padding: 22px 0 22px;
+    width: 1200px;
+    margin: 0 auto;
+    color: #666;
+    line-height: 1.5;
+}
+
+.footer-warrant-area {
+    text-align: left;
+    color: #a4a4a4;
+    line-height: 20px;
+    height: 39px;
+}
+
+.footer-warrant-area .footer-warrant-logo {
+    width: 82px;
+    height: 20px;
+    padding: 3px 20px 0 0;
+    display: block;
+    float: left;
+}
+
+.footer-warrant-area .footer-warrant-logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.footer-warrant-area .footer-warrant-logo img {
+    vertical-align: top;
+    width: 82px;
+    height: 20px;
+}
+
+
+/* logo右边 */
+
+.last_foot_right {
+    float: left;
+}
+
+.footer-warrant-link {
+    margin-top: 3px;
+    margin-bottom: 4px;
+    min-height: 12px;
+}
+
+.footer-warrant-link:before,
+.footer-warrant-link:after {
+    content: "";
+    display: table;
+}
+
+.footer-warrant-link li {
+    float: left;
+    line-height: 1;
+    padding-right: 6px;
+    border-right: 1px solid #d3d3d3;
+    margin-right: 6px;
+}
+
+.footer-warrant-link li a {
+    color: #777;
+    font-size: 12px;
+}
+
+.last_foot_right a:hover {
+    color: #ca151d;
+    text-decoration: none;
+}
+
+.last_foot_right a {
+    color: #a4a4a4;
+    font-size: 12px;
+}
+
+.footer-warrant-area em {
+    padding-right: 3px;
+    margin-left: 3px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+/* 右边图 */
+
+.footer-warrant-area .footer-warrant-img {
+    margin-top: 2px;
+}
+
+.fr {
+    float: right;
+}
+
+.footer-warrant-img a {
+    display: block;
+    width: 70px;
+    margin-left: 17px;
+    height: 24px;
+}
+
+.fimg1 {
+    float: left;
+}
+
+.footer-warrant-area .footer-warrant-img img {
+    vertical-align: top;
+    width: 70px;
+    height: 24px;
+}

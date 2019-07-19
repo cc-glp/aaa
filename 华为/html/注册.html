@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册_华为商城</title>
+    <link rel="short icon" href="../img01/favicon.ico">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/zhuce.css">
+    <link rel="stylesheet" href="../css/animate.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="header">
+        <div class="head_cen">
+            <div class="head_log">
+                <img src="../img/head-top.png" alt="">
+            </div>
+            <div class="xian">|</div>
+            <div class="shopp">华为商城</div>
+        </div>
+    </div>
+    <!-- 手机号 -->
+    <div class=" tele">
+        <div class="tele_top">
+            <div class="tele_tl active" >
+                <i class="tele_log"></i>
+                <span class="tele_zi">手机号</span>
+            </div>
+            <div class="tele_tl">
+                <i class="tele_log tele_yz"></i>
+                <span class="tele_zi">电子邮箱</span>
+            </div>
+            <div class="word_r">
+                <span>已有华为帐号</span>
+                <span class="dl" id="dl">登录&gt;</span>
+            </div>
+        </div>
+        <!-- 内容区 -->
+        <div class="neiboxs">
+            <!-- yi -->
+            <div class="reg">
+                <!-- 国家 -->
+                <div class="state">
+                    <div class="sta_l">
+                        国家/地区
+                    </div>
+                    <div class="sta_r">
+                        <div class="sta_zi">
+                            <span class="ZG">中国</span>
+                            <div class="Angle"></div>
+                            <ul class="sta_lie">
+                                <li>阿尔巴尼亚</li>
+                                <li>阿尔及利亚</li>
+                                <li>阿富汗</li>
+                                <li>阿根廷</li>
+                                <li>阿拉伯联合酋长国</li>
+                                <li>阿曼</li>
+                                <li>阿塞拜疆</li>
+                                <li>埃及</li>
+                                <li>埃塞俄比亚</li>
+                                <li>爱尔兰</li>
+                                <li>爱沙尼亚</li>
+                                <li>安道尔</li>
+                                <li>安哥拉</li>
+                                <li>中国</li>
+                                <li>中国澳门特别行政区</li>
+                                <li>中国台湾</li>
+                                <li>中国香港特别行政区</li>
+                                <li>瑙鲁</li>
+                                <li>梵蒂冈</li>
+                                <li>斐济</li>
+                                <li>中非共和国</li>
+                                <li>智利</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <!-- 手机号  -->
+                <div class="ber">
+                    <div class="ber-left">
+                        <div class="ber_l1" id="number">
+                            <span class="ber_l2" id="change">+86(中国)</span>
+                            <span class="ber_l3"></span>
+                            <ul class="ber_num" id="ber_num1">
+                                <li>+355(阿尔巴尼亚)</li>
+                                <li>+213(阿尔及利亚)</li>
+                                <li>+93(阿富汗)</li>
+                                <li>+54(阿根廷)</li>
+                                <li>+971(阿拉伯联合酋长国)</li>
+                                <li>+968(阿曼)</li>
+                                <li>+994(阿塞拜疆)</li>
+                                <li>+20(埃及)</li>
+                                <li>+251(埃塞俄比亚)</li>
+                                <li>+353(爱尔兰)</li>
+                                <li>+372(爱沙尼亚)</li>
+                                <li>+376(安道尔)</li>
+                                <li>+244(安哥拉)</li>
+                                <li>+86(中国)</li>
+                                <li>+853(中国澳门特别行政区)</li>
+                                <li>+886(中国台湾)</li>
+                                <li>+852(中国香港特别行政区)</li>
+                                <li>+674(瑙鲁)</li>
+                                <li>+379(梵蒂冈)</li>
+                                <li>+679(斐济)</li>
+                                <li>+236(中非共和国)</li>
+                                <li>+56(智利)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ber_right">
+                        <input class="ber_inp" type="text" placeholder="请输入手机号">
+                    </div>
+                </div>
+                <!--  -->
+                <!-- 点击按钮 -->
+                <div class="onthe">
+                    <div class="onover">
+                        <div class="oncirc">
+                            <div class="onxin"></div>
+                        </div>
+                        <div class="val">
+                            <span class="dation">点击按钮进行验证</span>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <!--验证码  -->
+                <div class="code">
+                    <div class="code_l">
+                        短信验证码
+                    </div>
+                    <div class="code_r">
+                        <input class="code_inp" type="text" placeholder="请输入短信验证码" value="">
+                        <div class="code_obt">
+                            <span class="code_sp">获取验证码</span>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <!-- 密码 -->
+                <div class="pass">
+                    <div class="pa_l">
+                        密码
+                    </div>
+                    <input class="pa_inp" type="password" placeholder="请输入密码" id="password">
+                </div>
+                <!--  -->
+                <!-- 再次密码 -->
+                <div class="pass zaici">
+                    <div class="pa_l">
+                        确认密码
+                    </div>
+                    <input class="pa_inp" type="password" placeholder="请再次输入密码" id="confirmPw">
+                </div>
+                <!--  -->
+                <!-- 出生日月 -->
+                <div class="day">
+                    <div class="day_l">
+                        出生日期
+                    </div>
+                    <div class="day_r">
+                        <div class="day_year">
+                            <div class="day_ye">
+                                <span class="yer">1999年</span>
+                                <span class="select-ico"></span>
+                            </div>
+                        </div>
+                        <ul class="yer_ul">
+                            <li>2019年</li>
+                            <li>2018年</li>
+                            <li>2017年</li>
+                            <li>2016年</li>
+                            <li>2015年</li>
+                            <li>2014年</li>
+                            <li>2013年</li>
+                            <li>2012年</li>
+                            <li>2011年</li>
+                            <li>2010年</li>
+                            <li>2009年</li>
+                            <li>2008年</li>
+                            <li>2007年</li>
+                            <li>2006年</li>
+                            <li>2005年</li>
+                            <li>2004年</li>
+                            <li>2003年</li>
+                            <li>2002年</li>
+                            <li>2001年</li>
+                            <li>1999年</li>
+                            <li>1998年</li>
+                            <li>1997年</li>
+                        </ul>
+                        <div class="yue">
+                            <div class="yue_t">
+                                <span class="yue_s1">1</span>
+                                <span class="yue_s2">月</span>
+                                <div class="select-ico jiao"></div>
+                            </div>
+                            <ul class="yue_ul">
+                                <li>12</li>
+                                <li>11</li>
+                                <li>10</li>
+                                <li>9</li>
+                                <li>8</li>
+                                <li>7</li>
+                                <li>6</li>
+                                <li>5</li>
+                                <li>4</li>
+                                <li>3</li>
+                                <li>2</li>
+                                <li>1</li>
+                            </ul>
+                        </div>
+                        <div class="ri">
+                            <div class="ri_t">
+                                <span class="ri_s1">1</span>
+                                <span class="ri_s2">日</span>
+                                <div class="select-ico jiao"></div>
+                            </div>
+                            <ul class="ri_ul">
+                                <li>31</li>
+                                <li>30</li>
+                                <li>29</li>
+                                <li>28</li>
+                                <li>27</li>
+                                <li>26</li>
+                                <li>25</li>
+                                <li>24</li>
+                                <li>23</li>
+                                <li>22</li>
+                                <li>21</li>
+                                <li>22</li>
+                                <li>21</li>
+                                <li>20</li>
+                                <li>19</li>
+                                <li>18</li>
+                                <li>17</li>
+                                <li>16</li>
+                                <li>15</li>
+                                <li>14</li>
+                                <li>13</li>
+                                <li>12</li>
+                                <li>11</li>
+                                <li>10</li>
+                                <li>9</li>
+                                <li>8</li>
+                                <li>7</li>
+                                <li>6</li>
+                                <li>5</li>
+                                <li>4</li>
+                                <li>3</li>
+                                <li>2</li>
+                                <li>1</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <!-- 注册 -->
+                <div class="zc">注册</div>
+                <!--  -->
+            </div>
+
+            <!-- er -->
+            <div class="reg reg_er">
+                <!-- 国家 -->
+                <div class="state">
+                    <div class="sta_l">
+                        国家/地区
+                    </div>
+                    <div class="sta_r">
+                        <div class="sta_zi">
+                            <span class="ZG">中国</span>
+                            <div class="Angle"></div>
+                            <ul class="sta_lie">
+                                <li>阿尔巴尼亚</li>
+                                <li>阿富汗</li>
+                                <li>阿根廷</li>
+                                <li>阿拉伯联合酋长国</li>
+                                <li>阿鲁巴</li>
+                                <li>阿曼</li>
+                                <li>阿塞拜疆</li>
+                                <li>埃及</li>
+                                <li>埃塞俄比亚</li>
+                                <li>爱尔兰</li>
+                                <li>爱沙尼亚</li>
+                                <li>安道尔</li>
+                                <li>安哥拉</li>
+                                <li>中国</li>
+                                <li>中国澳门特别行政区</li>
+                                <li>中国台湾</li>
+                                <li>中国香港特别行政区</li>
+                                <li>瑙鲁</li>
+                                <li>梵蒂冈</li>
+                                <li>斐济</li>
+                                <li>中非共和国</li>
+                                <li>智利</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <!-- 手机号  -->
+                <div class="ber">
+                    <div class="ber-left">
+                        <div class="ber_l1">
+                            <span class="ber_l2">邮件地址</span>
+                        </div>
+                    </div>
+                    <div class="ber_right">
+                        <input class="ber_inp" type="text" placeholder="请输入邮箱地址" value="">
+                    </div>
+                </div>
+                <!--  -->
+                <!-- 点击按钮 -->
+                <div class="onthe">
+                    <div class="onover">
+                        <div class="oncirc">
+                            <div class="onxin"></div>
+                        </div>
+                        <div class="val">
+                            <span class="dation">点击按钮进行验证</span>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <!--验证码  -->
+                <div class="code">
+                    <div class="code_l">
+                        邮件验证码
+                    </div>
+                    <div class="code_r">
+                        <input class="code_inp" type="text" placeholder="请输入邮件验证码" value="">
+                        <div class="code_obt">
+                            <span class="code_sp">获取验证码</span>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <!-- 密码 -->
+                <div class="pass">
+                    <div class="pa_l">
+                        密码
+                    </div>
+                    <input class="pa_inp" type="text" placeholder="请输入密码" value="" id="password2">
+                </div>
+                <!--  -->
+                <!-- 再次密码 -->
+                <div class="pass zaici">
+                    <div class="pa_l">
+                        确认密码
+                    </div>
+                    <input class="pa_inp" type="text" placeholder="请再次输入密码" id="confirmPw2">
+                </div>
+                <!--  -->
+                <!-- 手机号  -->
+                <div class="ber" style="margin-top: 30px;">
+                    <div class="ber-left">
+                        <div class="ber_l1" id="telephone">
+                            <span class="ber_l2" id="change2">+86(中国)</span>
+                            <span class="ber_l3"></span>
+                            <ul class="ber_num" id="ber_num2">
+                                <li>+355(阿尔巴尼亚)</li>
+                                <li>+213(阿尔及利亚)</li>
+                                <li>+93(阿富汗)</li>
+                                <li>+54(阿根廷)</li>
+                                <li>+971(阿拉伯联合酋长国)</li>
+                                <li>+968(阿曼)</li>
+                                <li>+994(阿塞拜疆)</li>
+                                <li>+20(埃及)</li>
+                                <li>+251(埃塞俄比亚)</li>
+                                <li>+353(爱尔兰)</li>
+                                <li>+372(爱沙尼亚)</li>
+                                <li>+376(安道尔)</li>
+                                <li>+244(安哥拉)</li>
+                                <li>+86(中国)</li>
+                                <li>+853(中国澳门特别行政区)</li>
+                                <li>+886(中国台湾)</li>
+                                <li>+852(中国香港特别行政区)</li>
+                                <li>+674(瑙鲁)</li>
+                                <li>+379(梵蒂冈)</li>
+                                <li>+679(斐济)</li>
+                                <li>+236(中非共和国)</li>
+                                <li>+56(智利)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ber_right">
+                        <input class="ber_inp" type="text" placeholder="请输入手机号" value="">
+                    </div>
+                </div>
+                <!--  -->
+                <!--验证码  -->
+                <div class="code">
+                    <div class="code_l">
+                        短信验证码
+                    </div>
+                    <div class="code_r">
+                        <input class="code_inp" type="text" placeholder="请输入短信验证码" value="">
+                        <div class="code_obt">
+                            <span class="code_sp">获取验证码</span>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <!-- 出生日月 -->
+                <div class="day">
+                    <div class="day_l">
+                        出生日期
+                    </div>
+                    <div class="day_r">
+                        <div class="day_year">
+                            <div class="day_ye">
+                                <span class="yer">1999年</span>
+                                <span class="select-ico"></span>
+                            </div>
+                        </div>
+                        <ul class="yer_ul">
+                            <li>2019年</li>
+                            <li>2018年</li>
+                            <li>2017年</li>
+                            <li>2016年</li>
+                            <li>2015年</li>
+                            <li>2014年</li>
+                            <li>2013年</li>
+                            <li>2012年</li>
+                            <li>2011年</li>
+                            <li>2010年</li>
+                            <li>2009年</li>
+                            <li>2008年</li>
+                            <li>2007年</li>
+                            <li>2006年</li>
+                            <li>2005年</li>
+                            <li>2004年</li>
+                            <li>2003年</li>
+                            <li>2002年</li>
+                            <li>2001年</li>
+                            <li>1999年</li>
+                            <li>1998年</li>
+                            <li>1997年</li>
+                        </ul>
+                        <div class="yue">
+                            <div class="yue_t">
+                                <span class="yue_s1">1</span>
+                                <span class="yue_s2">月</span>
+                                <div class="select-ico jiao"></div>
+                            </div>
+                            <ul class="yue_ul">
+                                <li>12</li>
+                                <li>11</li>
+                                <li>10</li>
+                                <li>9</li>
+                                <li>8</li>
+                                <li>7</li>
+                                <li>6</li>
+                                <li>5</li>
+                                <li>4</li>
+                                <li>3</li>
+                                <li>2</li>
+                                <li>1</li>
+                            </ul>
+                        </div>
+                        <div class="ri">
+                            <div class="ri_t">
+                                <span class="ri_s1">1</span>
+                                <span class="ri_s2">日</span>
+                                <div class="select-ico jiao"></div>
+                            </div>
+                            <ul class="ri_ul">
+                                <li>31</li>
+                                <li>30</li>
+                                <li>29</li>
+                                <li>28</li>
+                                <li>27</li>
+                                <li>26</li>
+                                <li>25</li>
+                                <li>24</li>
+                                <li>23</li>
+                                <li>22</li>
+                                <li>21</li>
+                                <li>22</li>
+                                <li>21</li>
+                                <li>20</li>
+                                <li>19</li>
+                                <li>18</li>
+                                <li>17</li>
+                                <li>16</li>
+                                <li>15</li>
+                                <li>14</li>
+                                <li>13</li>
+                                <li>12</li>
+                                <li>11</li>
+                                <li>10</li>
+                                <li>9</li>
+                                <li>8</li>
+                                <li>7</li>
+                                <li>6</li>
+                                <li>5</li>
+                                <li>4</li>
+                                <li>3</li>
+                                <li>2</li>
+                                <li>1</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <!-- 注册 -->
+                <div class="zc">注册</div>
+                <!--  -->
+            </div>
+
+            <!--  -->
+        </div>
+        <!--  -->
+        <!-- 底部 -->
+        <div class="box-sha"></div>
+        <div class="foot">
+            <p class="foot1">
+                华为帐号用户协议 | 关于华为帐号与隐私的声明 | 常见问题
+            </p>
+            <p class="foot1">
+                Copyright © 2011-2019 华为软件技术有限公司 版权所有 保留一切权利 苏B2-20070200号 | 苏ICP备09062682号-9
+            </p>
+        </div>
+        <!--  -->
+    </div>
+    <!--  -->
+</body>
+<script src="../js/jquery.js"></script>
+<script src="../js/cookie.js"></script>
+<script src="../js/zhuce.js"></script>
+
+</html>

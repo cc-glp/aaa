@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./img/tblg.ico">
+    <title> 淘宝网 - 淘！我喜欢</title>
+    <link rel="shortcut icon" href="./img/tblg.ico">
+    <title> 淘宝网 - 淘！我喜欢</title>
+    <link rel="stylesheet" href="./common.css">
+    <style>
+        .nav {
+            text-align: center;
+        }
+
+        .J_FilterBar {
+            font-size: 12px;
+            width: 1120px;
+            margin: auto;
+            padding-bottom: 100px;
+        }
+
+        .J_FilterBar>li {
+            padding-left: 15px;
+            font-weight: 700;
+            color: red;
+            font-size: 16px;
+        }
+
+        .wp li {
+            float: left;
+        }
+
+        .item {
+            background: #fcfcfc;
+            width: 1190px;
+            height: 130px;
+            border: 1px solid #e7e7e7;
+            margin-top: 30px;
+        }
+
+        .item>li {
+            float: left;
+        }
+
+        .inner {
+            padding-top: 20px;
+        }
+
+        .item-img {
+            width: 81px;
+            height: 81px;
+            float: left;
+        }
+
+        .item-img>img {
+            width: 100%;
+            height: auto;
+        }
+
+        .inner>a {
+            width: 226px;
+            float: right;
+        }
+
+        .dan-price {
+            color: #9c9c9c;
+            font-weight: 700;
+            font-size: 12px;
+            margin-left: 52px;
+        }
+
+        .number {
+            height: 25px;
+            width: 76px;
+            background-color: #f0f0f0;
+            margin-left: 82px;
+            margin-top: 20px;
+        }
+
+        .number>div {
+            float: left;
+            height: 23px;
+            width: 17px;
+            border: 1px solid #e5e5e5;
+            background: #f0f0f0;
+            text-align: center;
+            line-height: 23px;
+            color: #444;
+            cursor: pointer;
+        }
+
+        .numbe {
+            background: white;
+        }
+
+        .zong {
+            color: red;
+            font-weight: 700;
+            margin-left: 120px;
+        }
+
+        .shanchu {
+            margin-left: 150px;
+            cursor: pointer;
+        }
+
+        .foot {
+            background: #e5e5e5;
+            width: 1190px;
+            position: fixed;
+            bottom: 0px;
+            left: 50%;
+            margin-left: -559px;
+            height: 50px;
+            font-size: 16px;
+            line-height: 50px;
+        }
+
+        .jiesuan {
+            width: 120px;
+            height: 50px;
+            line-height: 50px;
+            background: #f40;
+            text-align: center;
+            font-family: 'Lantinghei SC', 'Microsoft Yahei';
+            font-size: 20px;
+            color: white;
+            float: left;
+            cursor: pointer;
+
+        }
+
+        .zongjia {
+            color: red;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head"></div>
+    <div class="nav">
+        <img src="./img/2.png" alt="">
+    </div>
+    <div class="J_FilterBar">
+        <li>全部商品 <span class="num" style="color: red"></span> </li>
+        <div class="wp clearfix" style="margin-top: 20px;">
+            <li style="width: 50px;"> <input type="checkbox" style="vertical-align: middle" class="all"> 全选 </li>
+            <li style="width: 100px;margin-left:20px;">商品信息</li>
+            <li style="width: 100px;margin-left:270px;">单价</li>
+            <li style="width: 100px;margin-left:30px;">数量</li>
+            <li style="width: 100px;margin-left:80px;">金额</li>
+            <li style="width: 100px;margin-left:80px;">操作</li>
+        </div>
+        <!-- <div class="item clearfix">
+            <li style="width: 50px;text-align: center;margin-top: 30px"><input type="checkbox"
+                    style="vertical-align: middle" class="danxun"> </li>
+            <li class="inner clearfix" style="width: 341px">
+                <div class="item-img">
+                    <img src="" alt="">
+                </div>
+                <a class="title">不呼呼</a>
+            </li>
+            <li class="dan-price inner">
+                444
+            </li>
+            <li class="number">
+                <div class="jian">-</div>
+                <div style="width: 34px;background: white" class="numbe">1</div>
+                <div class="jia">+</div>
+            </li>
+            <li class="inner zong">
+                <span>￥</span><span class="zongjine">123</span>
+            </li>
+            <li class="inner shanchu">
+                删除
+            </li>
+        </div> -->
+
+    </div>
+    <div class="foot">
+        <div class="jiesuan">结算 </div>
+        <span style="margin-left: 30px">￥</span><span class="zongjia" style="margin-left: 20px">00</span>
+        <span style="margin-left: 30px"> 一共有</span> <span class="shangpin">0 </span>个商品
+    </div>
+</body>
+<script src="./js/jquery.js"></script>
+<script>
+    $(function () {
+        if (getUrlParams('username') == undefined) {
+            var ll = confirm('您还没有登陆是否立即登陆')
+            window.open('./denglu.html')
+            if (ll) {
+                window.open('./denglu.html')
+            } else {
+                window.open('./denglu.html')
+            }
+        } else {
+            var name = getUrlParams('username')
+            var duixiang = JSON.parse(localStorage.getItem(name))
+            $.ajax({
+                type: 'get',
+                url: './main.json',
+                date: {},
+                dateType: 'json'
+            }).then(function (str) {
+                for (let i in duixiang) {
+                    if (typeof duixiang[i] == 'object') {
+                        for (let j in duixiang[i]) {
+                            if (j == 'index') {
+                                index = duixiang[i].index
+                                var html = `
+                                    <div class="item clearfix" index=${index}>
+                    <li style="width: 50px;text-align: center;margin-top: 30px"><input type="checkbox"
+                            style="vertical-align: middle" class="danxun"> </li>
+                    <li class="inner clearfix" style="width: 341px">
+                        <div class="item-img">
+                            <img src=${str.content[index].imgSrc} alt="">
+                        </div>
+                        <a class="title">${str.content[index].title}</a>
+                    </li>
+                    <li class="dan-price inner">
+                        ${duixiang[i].price}
+                    </li>
+                    <li class="number">
+                        <div class="jian">-</div>
+                        <div style="width: 34px;background: white" class="numbe">${duixiang[i].num}</div>
+                        <div class="jia">+</div>
+                    </li>
+                    <li class="inner zong">
+                        <span>￥</span><span class="zongjine">${(duixiang[i].num) * (duixiang[i].price)}</span>
+                    </li>
+                    <li class="inner shanchu">
+                        删除
+                    </li>
+                </div>
+                                    `
+                                $('.J_FilterBar').append(html)
+
+                            }
+
+                        }
+                    }
+                }
+
+
+
+
+
+
+
+            })
+
+
+
+
+
+        }
+
+    })
+    function getUrlParams(name) {
+        var re = new RegExp('(^|&)' + name + '=([^&]*)(&|$)')
+        var r = window.location.search.substr(1).match(re)
+        if (r == null) {
+            return;
+        } else {
+            return r[2];
+        }
+    }
+
+    $('.head').load('./head.html')
+    // 加减
+    $('.J_FilterBar').on('click', '.jia', function () {
+        var tt = $('.numbe').eq($(this).index('.jia')).html()
+        tt++;
+        console.log($(this).index('.jia'))
+        $('.numbe').eq($(this).index('.jia')).html(tt)
+        var dan = $('.dan-price').eq($(this).index('.jia')).html()
+        $('.zongjine').eq($(this).index('.jia')).html(dan * tt)
+        abc()
+    })
+
+    $('.J_FilterBar').on('click', '.jian', function () {
+        var tt = $('.numbe').eq($(this).index('.jian')).html()
+        console.log(tt)
+        tt--
+        if (tt <= 1) {
+            tt = 1
+        }
+        $('.numbe').eq($(this).index('.jian')).html(tt)
+        var dan = $('.dan-price').eq($(this).index('.jia')).html()
+        $('.zongjine').eq($(this).index('.jian')).html(dan * tt)
+        abc()
+    })
+    // 全选
+    $('.all').on('click', function () {
+        if ($(this).prop('checked') == true) {
+            $('.danxun').prop('checked', true);
+            $('.item').css('background', '#fff8e1')
+        } else {
+            $('.danxun').prop('checked', false)
+            $('.item').css('background', '#fcfcfc')
+        }
+        abc()
+    })
+    // 单选
+    $('.J_FilterBar').on('click', '.danxun', function () {
+        if ($(this).prop('checked') == true) {
+            $('.item').eq($(this).index('.danxun')).css('background', '#fff8e1')
+        } else {
+            $('.all').prop('checked',false)
+            $('.item').eq($(this).index('.danxun')).css('background', '#fcfcfc')
+        }
+        abc()
+    })
+    // 删除
+    $('.J_FilterBar').on('click', '.shanchu', function () {
+        var dd = $('.item').eq($(this).index('.shanchu')).attr('index')
+        $('.item').eq($(this).index('.shanchu')).remove()
+        var obj = JSON.parse(localStorage.getItem(getUrlParams('username')))
+        delete obj[dd]
+        localStorage.setItem(getUrlParams('username'), JSON.stringify(obj))
+
+    })
+    // 结算
+    function abc() {
+        // 清空样式
+        $('.shangpin').html(0)
+        $('.zongjia').html(0)
+        var danxun = document.getElementsByClassName('danxun')
+        var item = document.getElementsByClassName('item')
+        for (var i = 0; i < danxun.length; i++) {
+            if (danxun[i].checked) {
+                // 原来的金额数量
+                var yuan = parseInt($('.shangpin').html())
+                var yuanjin = parseFloat($('.zongjia').html())
+                // 加上的金额数量
+                var shuliang = $('.numbe').eq(i).html()
+                var shujin = $('.zongjine').eq(i).html()
+                // 现在的金额数量
+                var xian = yuan + parseInt(shuliang)
+                var xinjin = yuanjin + parseFloat(shujin)
+                $('.shangpin').html(xian)
+                $('.zongjia').html(xinjin)
+                
+            }
+        }
+    }
+    $('.foot').on('click', '.jiesuan', function () {
+       var danxun = document.getElementsByClassName('danxun')
+        confirm('结算成功')
+        window.open('./index.html?username='+getUrlParams('username'))
+        
+        for (var i = 0; i < danxun.length+1; i++) {
+            if (danxun[i].checked) {
+                var dd = $('.item').eq(i).attr('index')
+                var obj = JSON.parse(localStorage.getItem(getUrlParams('username')))
+                delete obj[dd]
+                localStorage.setItem(getUrlParams('username'), JSON.stringify(obj))
+                $('.item').eq(i).remove()
+
+            }
+        }
+
+
+    })
+    
+</script>
+
+</html>

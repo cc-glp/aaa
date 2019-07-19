@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人注册</title>
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/zhuce.css">
+    <script src="./js/jquery.js"></script>
+    <script src="./js/cookie.js"></script>
+    <script src="./js/drag.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo_con">
+            <a href="javascript:;" class="logo "></a>
+            <div class="logo_title">欢迎注册</div>
+            <div class="have_account">已有账号？ <a href="./login.html">请登录&gt;</a></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="progress_bar">
+            <div class="pro_step pro_step1 done_step">
+                <span class="step_index"></span>
+                <p class="step_desc">验证手机号</p>
+            </div>
+            <div class="pro_line line1"></div>
+            <div class="pro_step pro_step2">
+                <span class="step_index">2</span>
+                <p class="step_desc">填写账号信息</p>
+            </div>
+            <div class="pro_line line2"></div>
+            <div class="pro_step pro_step3">
+                <span class="step_index">3</span>
+                <p class="step_desc">注册成功</p>
+            </div>
+        </div>
+        <div class="main">
+            <div class="reg_form">
+                <div class="item_phone_wrap">
+                    <div class="form_item">
+                        <label class="select_country" id="select-country">中国 0086<a href="javascript:;"
+                                class="arrow"></a></label>
+                        <input type="text" id="ipt_num" class="field" value placeholder="建议使用常用手机号">
+                    </div>
+                    <div class="input_tip" id="tip01">
+                            验证完成后，你可以使用该手机登录或找回密码
+                    </div>
+                </div>
+                <div id="drag" style="color: rgb(255, 255, 255);" onselectstart="return false;">
+                    <div class="drag_bg"></div>
+                    <div class="drag_text">拖动滑块验证</div>
+                    <div class="handler handler_bg"></div>
+                </div>
+                <div id="step_next" class="and_btn">下一步</div>
+            </div>
+            <!-- 步骤二 -->
+            <div class="step02_wrap">
+                <!-- 用户名 -->
+                <div class="form_item step02_user">
+                    <label>用户名</label>
+                    <input type="text" id="form_account" class="field" placeholder="您的账户名和登录名">
+                </div>
+                <div class="input_tip" id="user_ts">
+                        支持中文、英文、数字、“-”、“_”的组合，4-20个字符
+                </div>
+                <!-- 设置密码 -->
+                <div class="form_item step02_pass">
+                    <label>设置密码</label>
+                    <input type="password" id="form_pwd" class="field" placeholder="建议使用两种或两种以上字符组合">
+                </div>
+                <div class="input_tip">
+                        建议使用字母、数字和符号两种及以上的组合
+                </div>
+                <!-- 确认密码 -->
+                <div class="form_item">
+                    <label>确认密码</label>
+                    <input type="password" id="form_equalTopwd" class="field" placeholder="请再次输入密码">
+                </div>
+                <div class="input_tip">
+                        请再次输入密码
+                </div>
+                <!-- 邮箱验证 -->
+                <div class="step02_email">
+                    <div class="form_item">
+                        <label>邮箱验证</label>
+                        <input type="text" id="form_email" class="field" placeholder="请输入邮箱">
+                    </div>
+                </div>
+                <div class="input_tip">
+                        验证完成后，你可以使用该邮箱登录
+                </div>
+                <!-- 立即注册 -->
+                <div>
+                    <button id="step02_register" class="and_btn">立即注册</button>
+                </div>
+            </div>
+
+            <div class="reg_other">
+                <a href="javascript:;" class="reg_item reg_person">
+                    <i class="reg_icon"></i>企业用户注册 </a>
+                <a href="javascript:;" class="reg_item reg_inter">
+                    <i class="reg_icon"></i>海外用户注册 </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer_con">
+            <div class="list">
+                <a href="javascript:;">关于我们</a>|
+                <a href="javascript:;">联系我们</a>|
+                <a href="javascript:;">人才招聘</a>|
+                <a href="javascript:;">商家入驻</a>|
+                <a href="javascript:;">广告服务</a>|
+                <a href="javascript:;">手机京东</a>|
+                <a href="javascript:;">友情链接</a>|
+                <a href="javascript:;">销售联盟</a>|
+                <a href="javascript:;">京东社区</a>|
+                <a href="javascript:;">京东公益</a>|
+                <a href="javascript:;">English Site</a>
+            </div>
+            <div class="copyright">
+                Copyright&nbsp;©&nbsp;2004-2019&nbsp;&nbsp;京东JD.com&nbsp;版权所有
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/zhuce.js"></script>
+
+</html>

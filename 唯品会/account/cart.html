@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CART</title>
+    <link rel='stylesheet' href='http://www.unitguyver.cn/guyver/model/css1.0.css'>
+    <style>
+        body {
+            font: 12px/1.5 tahoma, arial, Hiragino Sans GB, WenQuanYi Micro Hei, 微软雅黑, 宋体, sans-serif;
+            color: #333;
+        }
+
+        .wrap {
+            width: 100%;
+            height: 100%;
+            background: white;
+            color: #333;
+        }
+
+        .wrap>div {
+            width: 100%;
+        }
+
+        .center {
+            width: 960px;
+            height: 100%;
+            position: relative;
+            left: 50%;
+            margin-left: -480px;
+        }
+
+        .top {
+            height: 80px;
+            border-bottom: 2px solid #f3168a;
+        }
+
+        .middle {
+            min-height: 320px;
+            padding: 50px 0;
+        }
+
+        .foot {
+            height: 200px;
+            border-top: 1px solid #ebebeb;
+            background-color: #fcfcfc;
+            font-size: 13px;
+            color: grey;
+        }
+
+        .logo {
+            width: 214px;
+            height: 48px;
+            position: relative;
+            top: 15px;
+        }
+
+        .server {
+            width: 400px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 10px 0;
+            font-size: 15px;
+            line-height: 30px;
+        }
+
+        .server_up {
+            width: 100%;
+            height: 50%;
+            color: grey;
+        }
+
+        .server_down {
+            width: 100%;
+            height: 50%;
+        }
+
+        .foot_top {
+            width: 100%;
+            height: 30px;
+            background: #f3168a;
+            color: white;
+            padding: 0 200px;
+            line-height: 30px;
+            text-align: center;
+        }
+
+        .foot p:nth-child(2) {
+            margin-top: 10px;
+        }
+
+        .foot p {
+            text-align: center;
+            line-height: 20px;
+        }
+
+        .foot span:hover {
+            color: #f3168a;
+        }
+
+        .foot_bottom {
+            width: 100%;
+            height: 40px;
+            padding: 0 150px;
+        }
+
+        .foot_bottom li {
+            height: 40px;
+            background: url(https://shop.vipstatic.com/img/common/footer-hash-3de6f1ae.png?939748fb);
+        }
+
+        .foot_bottom li:nth-child(1) {
+            width: 105px;
+            background-position: 0 0;
+        }
+
+        .foot_bottom li:nth-child(2) {
+            width: 99px;
+            background-position: 0 -150px;
+        }
+
+        .foot_bottom li:nth-child(3) {
+            width: 66px;
+            background-position: 0 -200px;
+        }
+
+        .foot_bottom li:nth-child(4) {
+            width: 70px;
+            background-position: 0 -250px;
+        }
+
+        .foot_bottom li:nth-child(5) {
+            width: 75px;
+            background-position: 0 -300px;
+        }
+
+        .foot_bottom li:nth-child(6) {
+            width: 76px;
+            background-position: 0 -400px;
+        }
+
+        .foot_bottom li:nth-child(7) {
+            width: 76px;
+            background-position: 0 -450px;
+        }
+
+        .shop_top {
+            width: 100%;
+            height: 54px;
+            border-bottom: 1px solid #d0d0d0;
+            margin-bottom: 30px;
+        }
+
+        .shop_top span {
+            display: inline-block;
+            width: 100px;
+            height: 54px;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 54px;
+            text-align: center;
+            border-bottom: 3px solid transparent;
+            position: relative;
+            top: -2px;
+        }
+
+        .shop_top span:nth-child(1) {
+            color: #f10180;
+            border-bottom: 3px solid #f10180;
+        }
+
+        .shop_top span:hover {
+            color: #f10180;
+        }
+
+        .shop_main {
+            width: 100%;
+            font-size: 15px;
+            /* display: none; */
+        }
+
+        .shop_list {
+            width: 100%;
+            border-left: 1px solid #e0e0e0;
+            border-right: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+            flex-direction: column;
+        }
+
+        .shop_item {
+            width: 100%;
+            height: 40px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            line-height: 40px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+            border-left: 2px solid #f10180;
+            border-bottom: none;
+            background-color: #f9f9f9;
+        }
+
+        .item1,
+        .shop_list li div:nth-child(1) {
+            width: 300px;
+            height: 100%;
+            text-align: left;
+            padding: 0 20px;
+            cursor: pointer;
+        }
+
+        .shop_list li div:nth-child(1) img {
+            width: 58px;
+            height: 74px;
+        }
+
+        .item1 {
+            color: #f10180;
+            font-size: 18px;
+            padding-left: 10px;
+        }
+
+        .item2,
+        .shop_list li div:nth-child(2) {
+            width: 300px;
+            height: 100%;
+        }
+
+        .item3,
+        .shop_list li div:nth-child(3) {
+            width: 100px;
+            height: 100%;
+        }
+
+        .item4,
+        .shop_list li div:nth-child(4) {
+            width: 150px;
+            height: 100%;
+        }
+
+        .item5,
+        .shop_list li div:nth-child(5) {
+            width: 100px;
+            height: 100%;
+        }
+
+        .shop_list li {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            border-top: 1px solid #e3e2e2;
+        }
+
+        .shop_list li div {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .shop_list li div:nth-last-child(1) {
+            cursor: pointer;
+        }
+
+        .shop_list li div:nth-child(1) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .shop_list li div ul {
+            width: 66px;
+            height: 22px;
+        }
+
+        .shop_list li div ul li {
+            width: 22px;
+            height: 22px;
+            border: 1px solid #e3e2e2;
+            line-height: 22px;
+            cursor: pointer;
+        }
+
+        .myhistory {
+            width: 100%;
+            margin-top: 30px;
+            font-size: 12px;
+        }
+
+        .history_top {
+            width: 100%;
+            height: 35px;
+            border-bottom: 1px solid #d0d0d0;
+        }
+
+        .history_top p {
+            width: 75px;
+            height: 100%;
+            line-height: 35px;
+            font-size: 17px;
+            font-weight: 700;
+            border-bottom: 3px solid #f10180;
+            position: relative;
+            top: 1px;
+            text-align: center;
+        }
+
+        .history {
+            padding: 20px 30px;
+            justify-content: start;
+            overflow: hidden;
+        }
+
+        .history li {
+            width: 142px;
+            height: 256px;
+            margin-right: 30px;
+            position: relative;
+            border: 1px dashed #d0d0d0;
+        }
+
+        .history li img {
+            width: 140px;
+            height: 178px;
+        }
+
+        .history li p:nth-of-type(2) {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #f10180;
+            position: absolute;
+            bottom: 0;
+        }
+
+        .history li p span {
+            display: block;
+            width: 45%;
+            height: 100%;
+        }
+
+        .history li p span:nth-of-type(2) {
+            background-color: #fcedf2;
+            border: 1px solid #ffbee0;
+            border-radius: 3px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .ad {
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+
+        .ad li {
+            width: 302px;
+            height: 141px;
+            background: url(https://ccp.vipstatic.com/img/cart/te/4/commons/sprites-hash-29a8cdc6.png?f30a4265);
+        }
+
+        .ad li:nth-child(1) {
+            background-position: -306px 0;
+        }
+
+        .ad li:nth-child(2) {
+            background-position: 0 0;
+        }
+
+        .ad li:nth-child(3) {
+            background-position: 0 -145px;
+        }
+
+        .price {
+            width: 100%;
+            height: 162px;
+            border: 1px solid #d0d0d0;
+        }
+
+        .price_count {
+            width: 100%;
+            height: 112px;
+            padding: 20px 36px;
+        }
+
+        .price_count div:nth-child(1) {
+            float: left;
+        }
+
+        .price_count div:nth-child(1) p {
+            width: 124px;
+            height: 32px;
+            color: #f10180;
+            border: 1px solid #f10180;
+            border-radius: 3px;
+            line-height: 30px;
+            padding: 0 10px;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .price_count div:nth-child(2) {
+            float: right;
+            line-height: 36px;
+            font-size: 16px;
+        }
+
+        .price_pay {
+            border-top: 1px solid #d0d0d0;
+            background-color: #f3f3f3;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            line-height: 50px
+        }
+
+        .price_pay div:nth-child(1) {
+            width: 700px;
+            text-align: right;
+            padding: 0 20px;
+        }
+
+        .price_pay div:nth-child(2) {
+            background: #f10180;
+            text-align: center;
+            color: white;
+            width: 250px;
+            height: 100%;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .shop_login {
+            width: 100%;
+            padding: 100px;
+        }
+
+        .shop_login div {
+            width: 100px;
+            height: 32px;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            margin-left: -50px;
+            margin-top: -16px;
+            background-color: #f43499;
+            border: 1px solid #f10180;
+            border-color: #f43499;
+            border-radius: 3px;
+            line-height: 32px;
+            text-align: center;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="top">
+            <div class="center">
+                <div class="logo">
+                    <img src="https://a.vpimg2.com/upload/upimg2/slogan/cartHeader.png" alt="">
+                </div>
+                <div class="server">
+                    <ul class="server_up">
+                        <li>登录</li>
+                        <li>注册</li>
+                        <li>400-6789-888</li>
+                        <li>在线客服</li>
+                        <li>会员服务</li>
+                    </ul>
+                    <ul class="server_down">
+                        <li>100% 正品保证</li>
+                        <li>七天无理由放心退</li>
+                        <li>限时抢购</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="middle">
+            <div class="center">
+                <div class="shop_process"></div>
+                <div class="shop_top">
+                    <span>特卖商品</span>
+                    <span>唯品医药</span>
+                </div>
+                <p class="address" style="font-size: 20px;margin-bottom:25px;">配送至<span></span> 请在倒计时结束前提交订单，下单后你另有 30
+                    分钟的支付时间。
+                </p>
+                <div class="shop_main">
+                    <div class="shop_item">
+                        <div class="item1">精选特卖</div>
+                        <div class="item2">单价</div>
+                        <div class="item3">数量</div>
+                        <div class="item4">小计</div>
+                        <div class="item5">操作</div>
+                    </div>
+                    <ul class="shop_list">
+                    </ul>
+                    <div class="price">
+                        <div class="price_count">
+                            <div>
+                                <p>使用优惠卷</p>
+                                <p>使用优惠口令</p>
+                            </div>
+                            <div>
+                                <p><span>已选<i class="totalnum">0</i>件商品 商品金额 </span><span class="total">0</span></p>
+                                <p><span>总金额（未含运费）</span><span class="total">0</span></p>
+                            </div>
+                        </div>
+                        <div class="price_pay">
+                            <div>请在倒计时结束前结算</div>
+                            <div class="buy">立即结算</div>
+                        </div>
+
+                    </div>
+                    <div class="myhistory">
+                        <div class="history_top">
+                            <p>购物历史</p>
+                        </div>
+                        <ul class="history">
+                        </ul>
+                    </div>
+                    <ul class="ad">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="shop_login">
+                    <div>登录</div>
+                </div>
+
+            </div>
+        </div>
+        <div class="foot">
+            <div class="center">
+                <div class="foot_top">
+                    <ul>
+                        <li>关于我们</li>
+                        <li>About us</li>
+                        <li>Investor Relations</li>
+                        <li>媒体报道</li>
+                        <li>品牌招商</li>
+                        <li>隐私条款</li>
+                        <li>唯品诚聘</li>
+                        <li>唯品卡</li>
+                        <li>联系我们</li>
+                    </ul>
+                </div>
+                <p><i>Copyright © 2008-2019 vip.com，All Rights Reserved 使用本网站即表示接受</i><span>唯品会用户协议</span><i>版权所有
+                    </i><span>广州唯品会电子商务有限公司</span></p>
+                <p><span>粤公网安备 44010302111111号</span>
+                    <span>粤ICP备08114786号</span>
+                    <span>增值业务经营许可证：粤B2-20170777 </span>
+                    <span>网络文化经营许可证：粤网文〔2018〕5030-1743号</span></p>
+                <p><span>自营主体经营证照</span>
+                    <span>风险监测信息</span>
+                    <span>互联网药品信息服务资格证书：（粤）-经营性-2018-0271</span>
+                    <span> 网络食品交易第三方平台备案凭证：粤B2-20170777 </span>
+                    <span>医疗器械网络交易服务第三方平台备案凭证：（粤）网械平台备字[2019]第00001号</span></p>
+                <ul class="foot_bottom">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script src='https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js'></script>
+<script>
+    function changecart(goods, number) {
+        $.ajax({
+            type: 'post',
+            url: 'http://www.unitguyver.cn/guyver/project/vip/php/addcart.php',
+            data: document.cookie + '&goods=' + goods + '&number=' + number,
+            success: function (num) {
+                var index = $('.shop_list .' + goods).index('.shop_list>li');
+                if (shop_list[index]) {
+                    totalnum = totalnum - Number($('.' + goods + ' div ul li').eq(1).text()) + Number(num);
+                    total = total - Number($('.' + goods + ' div').eq(3).text().match(/[0-9]+/)[0]) + num * $('.' + goods + ' div').eq(1).text().match(/[0-9]+/)[0];
+                    $('.totalnum').text(totalnum);
+                    $('.total').text('￥' + total);
+                }
+                if (num == 0) {
+                    $('.shop_list .' + goods).remove();
+                    shop_list = [];
+                } else {
+                    $('.' + goods + ' div ul li').eq(1).text(num);
+                    $('.' + goods + ' div').eq(3).text('￥' + num * $('.' + goods + ' div').eq(1).text().match(/[0-9]+/)[0]);
+                }
+            }
+        })
+    }
+    $(function () {
+        window.islog = false;
+        window.id = document.cookie.split('|')[0].replace('id=', '');
+        if (id) {
+            islog = true;
+            $('.server li').eq(0).text('你好，' + id);
+            $('.server li').eq(1).text('[退出]');
+            $('.shop_main').show();
+            $('.shop_login').hide();
+            $.ajax({
+                type: 'post',
+                url: 'http://www.unitguyver.cn/guyver/project/vip/php/getcart.php',
+                data: document.cookie,
+                success: function (cart) {
+                    cart = JSON.parse(cart);
+                    var text = '', his = '', get = [];
+                    for (let i = 0; i < cart.length; i++) {
+                        var index = 0;
+                        for (let j = 0; j < cart.length; j++) {
+                            if (cart[i].level < cart[j].level) { index++ }
+                        }
+                        get[index] = cart[i];
+                    }
+                    for (let i = 0; i < get.length; i++) {
+                        if (get[i].number > 0) {
+                            text += '<li class="' + get[i].goods + '"><div><img src="' + get[i].pic + '" alt=""><p>' + get[i].info + '</p></div><div>' + get[i].price + '</div><div><ul><li>-</li><li>' + get[i].number + '</li><li>+</li></ul></div><div></div><div>删除</div></li>';
+                        }
+                        his += '<li class="' + get[i].goods + '"><img src="' + get[i].pic + '" alt=""><p>' + get[i].info + '</p><p><span>' + get[i].price + '</span><span>重新购买</span></p></li>';
+                    }
+                    $('.shop_list').html(text);
+                    $('.history').html(his);
+                    $('.shop_list>li').each(function () {
+                        $(this).children('div').eq(3).text('￥' + $(this).children('div').eq(1).text().match(/[0-9]+/) * $(this).find('li').eq(1).text());
+                    })
+                }
+            })
+        } else {
+            $('.shop_main').hide();
+            $('.shop_login').show();
+            $('.address').hide();
+        }
+        $('.shop_login div').click(function () {
+            window.open('./account.html?login');
+        })
+    })
+    $('.server li').eq(0).click(function () {
+        !islog && (window.location = './account.html?login');
+    });
+    $('.server li').eq(1).click(function () {
+        if (islog) {
+            islog = false;
+            document.cookie = "id=" + id + "; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+            $('.server li').eq(0).text('登录');
+            $('.server li').eq(1).text('注册');
+            $('.shop_main').hide();
+            $('.shop_login').show();
+            $('.address').hide();
+        } else {
+            window.location = './account.html?regist';
+        }
+    })
+    $('.shop_list').delegate('li div ul li', 'click', function () {
+        if ($(this).index() == 0) {
+            changecart($(this).parents('.shop_list li').attr('class'), -1);
+
+        } else if ($(this).index() == 2) {
+            changecart($(this).parents('.shop_list li').attr('class'), 1);
+        }
+    })
+    $('.shop_list').delegate('li div:nth-of-type(5)', 'click', function () {
+        changecart($(this).parents('.shop_list li').attr('class'), 0);
+    })
+    $('.history').delegate('li p:nth-of-type(2) span:nth-of-type(2)', 'click', function () {
+        var that = $(this).parents('li');
+        $.ajax({
+            type: 'post',
+            url: 'http://www.unitguyver.cn/guyver/project/vip/php/addcart.php',
+            data: document.cookie + '&goods=' + that.attr('class') + '&pic=' + that.children('img').attr('src') + '&info=' + that.children('p').eq(0).text() + '&price=' + that.find('span').eq(0).text() + '&number=1',
+            success: function (res) {
+                $.ajax({
+                    type: 'post',
+                    url: 'http://www.unitguyver.cn/guyver/project/vip/php/getcart.php',
+                    data: document.cookie,
+                    success: function (cart) {
+                        shop_list = [];
+                        cart = JSON.parse(cart);
+                        var text = '', his = '', get = [];
+                        for (let i = 0; i < cart.length; i++) {
+                            var index = 0;
+                            for (let j = 0; j < cart.length; j++) {
+                                if (cart[i].level < cart[j].level) { index++ }
+                            }
+                            get[index] = cart[i];
+                        }
+                        for (i = 0; i < get.length; i++) {
+                            if (get[i].number > 0) {
+                                text += '<li class="' + get[i].goods + '"><div><img src="' + get[i].pic + '" alt=""><p>' + get[i].info + '</p></div><div>' + get[i].price + '</div><div><ul><li>-</li><li>' + get[i].number + '</li><li>+</li></ul></div><div></div><div>删除</div></li>';
+                            }
+                            his += '<li class="' + get[i].goods + '"><img src="' + get[i].pic + '" alt=""><p>' + get[i].info + '</p><p><span>' + get[i].price + '</span><span>重新购买</span></p></li>';
+                        }
+                        $('.shop_list').html(text);
+                        $('.history').html(his);
+                        $('.shop_list>li').each(function () {
+                            $(this).children('div').eq(3).text('￥' + $(this).children('div').eq(1).text().match(/[0-9]+/) * $(this).find('li').eq(1).text());
+                        })
+                    }
+                })
+            }
+        })
+    })
+    var shop_list = [], total = 0, totalnum = 0;
+    $('.shop_list').delegate('li>div:nth-of-type(1)', 'click', function () {
+        var index = $(this).index('.shop_list>li>div:nth-of-type(1)');
+        if (shop_list[index]) {
+            $(this).parents('.shop_list li').css('background', 'white');
+            totalnum -= Number($('.shop_list>li').eq(index).find('li').eq(1).text());
+            $('.totalnum').text(totalnum);
+            total -= Number($(this).parents('.shop_list>li').children('div').eq(3).text().match(/[0-9]+/)[0]);
+            $('.total').text('￥' + total);
+        } else {
+            $(this).parents('.shop_list li').css('background', 'yellow');
+            totalnum += Number($('.shop_list>li').eq(index).find('li').eq(1).text());
+            $('.totalnum').text(totalnum);
+            total += Number($(this).parents('.shop_list>li').children('div').eq(3).text().match(/[0-9]+/)[0]);
+            $('.total').text('￥' + total);
+        }
+        shop_list[index] = !shop_list[index];
+    })
+    $('.buy').click(function () {
+        $.ajax({
+            type: 'post',
+            url: 'http://www.unitguyver.cn/guyver/project/vip/php/address.php',
+            data: document.cookie,
+            success: function (res) {
+                alert(Number(res));
+                if (Number(res)) {
+                    alert(-total);
+                    $('.shop_list>li').each(function () {
+                        if (shop_list[$(this).index()]) {
+                            changecart($(this).attr('class'), 0);
+                        }
+                    })
+                } else {
+                    var add = prompt('地址');
+                    $.ajax({
+                        type: 'post',
+                        url: 'http://www.unitguyver.cn/guyver/project/vip/php/address.php',
+                        data: document.cookie + '&add=' + add,
+                        success: function (res) {
+                            if (res) {
+                                alert(-total);
+                                $('.shop_list>li').each(function () {
+                                    if (shop_list[$(this).index()]) {
+                                        changecart($(this).attr('class'), 0);
+                                    }
+                                })
+                            }
+                        }
+                    })
+                }
+            }
+        })
+    })
+</script>
+
+</html>

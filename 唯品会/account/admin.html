@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>ADMIN</title>
+    <link rel='stylesheet' href='http://www.unitguyver.cn/guyver/model/css1.0.css'>
+    <style>
+        .wrap {
+            width: 100%;
+            height: 100%;
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        table {
+            color: white;
+            position: relative;
+            float: left;
+            margin: 50px;
+        }
+
+        td {
+            padding: 20.1px;
+            cursor: pointer;
+        }
+
+        .account {
+            background: gray;
+        }
+
+        .opera {
+            background: green;
+        }
+
+        .account td {
+            width: 160px;
+            height: 60px;
+            text-align: center;
+        }
+
+        .account tr:nth-of-type(1) {
+            background: red;
+        }
+
+        .wrap>div {
+            margin: 100px 300px;
+            position: relative;
+        }
+        .point{
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 32px;
+            height: 64px;
+            border-top: 32px solid transparent;
+            border-bottom: 32px solid transparent;
+            border-left: 32px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div>
+            <!-- <div class="point"></div> -->
+            <table class="account" border='1'></table>
+            <table class="opera" border='1'>
+                <td>查看购物车</td>
+                <td>清空购物车</td>
+                <td>修改密码</td>
+                <td>注销账号</td>
+            </table>
+        </div>
+    </div>
+</body>
+<script src='https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js'></script>
+<script src='http://www.unitguyver.cn/guyver/model/js1.0.js'></script>
+<script>
+    $(function () {
+        window.key = prompt();
+        window.bool = [];
+        function myajax(data, fun) {
+            $.ajax({
+                type: 'post',
+                url: 'http://www.unitguyver.cn/guyver/project/vip/php/admin.php',
+                data: data + '&key=' + key,
+                success: function(res){
+                    fun(res);
+                }
+            })
+        }
+        myajax('type=1', function (res) {
+            console.log(res);
+            res = JSON.parse(res);
+            var content = '';
+            for (i = 0; i < res.length; i++) {
+                content += '<tr><td>' + res[i].id + '</td><td>' + res[i].pass + '</td></tr>';
+            }
+            $('.account').html(content);
+            window.id = $('.account tr').eq(0).children('td').eq(0).text();
+            window.index = 0;
+        })
+        $('.account').delegate('tr', 'click', function () {
+            $('.account').css('top', (- $(this).index('.account tr') * 64) + 'px');
+            $('.account tr').css('background', 'gray');
+            $(this).css('background', 'red');
+            id = $(this).children('td').eq(0).text();
+            index = $(this).index();
+        })
+        $('.opera td').click(function () {
+            if(!bool[$(this).index()]){
+                bool[$(this).index()] = $(this).text();
+                $(this).css('background', 'red');
+                $(this).text('右键取消');
+                return;
+            }else{
+                $(this).css('background', 'green');
+                $(this).text(bool[$(this).index()]);
+                bool[$(this).index()] = false;
+            }
+            var type = $(this).index() + 2;
+            switch (type) {
+                case 2:
+                    myajax('id=' + id + '&type=' + type, function (res) {
+                        res = JSON.parse(res);
+                        console.log(res);
+                    })
+                    break;
+                case 3:
+                    myajax('id=' + id + '&type=' + type, function (res) {
+                        console.log(res);
+                    })
+                    break;
+                case 4:
+                    var pass = prompt();
+                    myajax('id=' + id + '&type=' + type + '&pass=' + pass, function (res) {
+                        console.log(res);
+                        $('.account tr').eq(index).children('td').eq(1).text(res);
+                    })
+                    break;
+                case 5:
+                    myajax('id=' + id + '&type=' + type, function (res) {
+                        console.log(res);
+                        $('.account tr').eq(index).remove();
+                        $('.account').css('top', 0);
+                        $('.account tr').eq(0).css('background', 'red');
+                        id = $('.account tr').eq(0).children('td').eq(0).text();
+                        index = 0;
+                    })
+                    break;
+            }
+        })
+        $('.opera td').contextmenu(function(e){
+            if(!bool[$(this).index()]){
+                return;
+            }
+            $(this).css('background', 'green');
+            $(this).text(bool[$(this).index()]);
+            bool[$(this).index()] = false;
+            e.preventDefault ? e.preventDefault() : e.returnValue = 'false';
+            return false;
+        })
+    })
+</script>
+
+</html>

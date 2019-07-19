@@ -1,0 +1,457 @@
+*,li,a{
+	margin: 0;
+	padding: 0;
+	font: 12px/1.5 Arial,Helvetica,sans-serif;
+	list-style: none;
+	text-decoration: none;
+}
+.wrap{
+	width: 100%;
+	height: 900px;
+	overflow: hidden;
+	min-width: 1120px;
+    background-color: #ebebeb;
+}
+.header{
+	width: 100%;
+	height: 67px;
+}
+.header1{
+    width: auto;
+    max-width: 998px;
+    height: 67px;
+    margin: 0 auto;
+    border: 0;
+    position: relative;
+}
+.header1a{
+	width: 143px;
+	height: 52px;
+	margin-right: 20px;
+	float: left;
+}
+.header1a img{
+    margin-left: 4px;
+    margin-top: 17px;
+}
+.header1b{
+	float: left;
+	color: white;
+    font-size: 20px;
+    line-height: 50px;
+    font-family: "arial";
+    padding-top: 14px;
+}
+.header1b2{
+	color: #333;
+    font-size: 18px;
+    margin-top: 10px;
+    float: left;
+    margin-left: 20px;
+}
+.huang{
+	width: 100%;
+	height: 40px;
+	background: #FFFBE4;
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    color: #989898;
+	font-size: 11px;
+}
+.huang1{
+	background: url(../img/huangtiao1.png)no-repeat;
+    background-size: 13px 13px;
+    padding: 0 20px 0 0;
+}
+.denglu{
+	width: 100%;
+	height: 590px;
+	background-color: #081638;
+}
+.denglu1{
+	width: 1130px;
+	height: 590px;
+	margin: auto;
+	position: relative;
+	background: url(../img/denglu_dl.png)no-repeat;
+}
+.denglu1a{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 530px;
+    position: relative;
+    width: 380px;
+    float: right;
+    background-color: #fff;
+}
+.dlu1{
+	width: 380px;
+	height: 303px;
+}
+.dlu1a{
+	width: 100%;
+    margin: 24px auto;
+    text-align: center;
+}
+.dlu1a span{
+	height: 20px;
+	line-height: 20px;
+    font-size: 20px;
+    color: #333;
+    font-weight: 500;
+    cursor: pointer;
+    width: 167px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0 10px;
+}
+.dlu1a .dlu1a1{
+	color: #b40707;
+}
+.dlu1a .dlu1a2{
+    border-left: 1px solid #ccc;
+}
+.dlu1b{
+    width: 328px;
+    margin: 0 auto;
+}
+.dlu1b1{
+	font-size: 12px;
+    color: #ff3320;
+    line-height: 1.3;
+    min-height: 15px;
+}
+.dlu1b2{
+	width: 328px;
+}
+table {
+    width: 328px;
+}
+.du_td{
+    border-bottom: 1px solid #ccc;
+    height: 46px;
+}
+.du_label{
+	padding-top: 0!important;
+}
+.du_label1{
+	padding: 0;
+    margin: 0!important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 328px;
+    font-size: 14px;
+    height: 46px;
+    line-height: 46px;
+    border-radius: 0;
+}
+.du_td1{
+    padding: 16px 0;
+    line-height: 1
+}
+.du_ta1a{
+    color: #007dff;
+    cursor: pointer;
+    float: left;
+}
+.phone{
+    width: 11px;
+    height: 15px;
+    background:url(../img/ic_smsLogin.png)no-repeat ;
+    display: inline-block;
+    background-position: -2px 0;
+    margin-bottom: -3px;
+    margin-right: 6px;
+}
+.error {
+    border-color: #bc0000!important;
+    color: #B00;
+    font-weight: 700;
+    font-size: 12px;
+}
+.button-login{
+    width: 100%;
+    border-radius: 0;
+    line-height: 44px;
+    height: 44px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 26px;
+    text-align: center;
+    margin-top: 0;
+    font-family: "Microsoft YaHei"!important;
+    background-color: #b40707;
+    border-width: 0 0 2px 0;
+    border-style: solid;
+    border-color: #b40707;
+    color: #fff;
+}
+.jz{
+    padding: 16px 0;
+    position: relative;
+}
+#remember_name{
+	position: absolute;
+    top: -100000px;
+    left:-100000px;
+}
+.tick-on-icon{
+    width: 18px;
+    height: 18px;
+    background: url(../img/tick-on-18.png)no-repeat;
+    background-size: cover;
+    display: inline-block;
+    margin-bottom: -4px;
+    left: 0;
+}
+.checkbox{
+    margin-right: 5px;
+    margin-top: 3px;
+}
+.marginR6 {
+    margin-right: 6px;
+}
+.tick-off-icon {
+    width: 18px;
+    height: 18px;
+   background: url(../img/tick-off-18.png)no-repeat;
+    background-size: cover;
+    display: inline-block;
+    margin-bottom: -4px;
+    left: 0;
+}
+.referenceTarget_login_more {
+    position: absolute;
+    right: 0;
+    z-index: 1000;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.r {
+    float: right;
+}
+.du_td .text{
+	width: 100%;
+	height: 43px;
+	line-height: 43px;
+	border-style: none;
+}
+.btn-primary {
+    color: #007dff;
+    font-family: Tahoma;
+}
+.set-more {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+}
+.set-more .more-list {
+    position: absolute;
+    top: 10px;
+    right: -14px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+    border-collapse: separate;
+    background: #fff;
+	display: none;
+}
+.set-more .more-list li {
+    height: 48px;
+    line-height: 48px;
+    font-size: 15px;
+    color: #000;
+    word-break: keep-all;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.bottom_border {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.mt-links{
+    text-align: center;
+    line-height: 1.3;
+    padding: 0px;
+}
+.mt-links-float{
+	cursor: pointer;
+	text-align: center;
+}
+.regist{
+	padding-right: 10px;
+    border-right: 1px solid #ccc;
+    text-align: right;
+}
+.forgot {
+    padding-left: 10px;
+    text-align: left;
+}
+.dlu1a2:hover{
+	color: #b40707;
+}
+.dlu2{
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    color: #999;
+    left: 20px;
+    line-height: 16px;
+}
+.thirdLintTitle {
+    position: relative;
+    width: 328px;
+    margin-bottom: 10px;
+}
+.thirdLoginDiv {
+    width: 328px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.thirdLintTitle .line-left {
+    left: 0;
+    top: 50%;
+    background: url(../img/thirdLine.png)no-repeat;
+    height: 1px;
+    position: absolute;
+    width: 94px;
+    background-size: cover;
+}
+.thirdLintTitle .third-tips {
+    color: #ccc;
+    vertical-align: middle;
+    text-align: center;
+    max-width: 190px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    background: #fff;
+    padding: 0 10px;
+    line-height: 1.5;
+}
+.thirdLintTitle .line-right {
+	background: url(../img/thirdLine-reverse.png)no-repeat;
+    height: 1px;
+    position: absolute;
+    width: 94px;
+    background-size: cover;
+    right: 0;
+    bottom: 8px;
+}
+.thirdLoginDiv {
+    width: 328px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.thirdLoginDiv span {
+    padding: 0 10px;
+    text-align: center;
+    display: inline-block;
+}
+.qqLogin_bigIco a {
+	background: url(../img/third_login.png)no-repeat;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    display: inline-block;
+    margin: 0;
+    float: none;
+    background-position: -72px -9px;
+}
+.alipayLogin_bigIco a {
+	background: url(../img/third_login.png)no-repeat;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    display: inline-block;
+    margin: 0;
+    float: none;
+    background-position: -132px -9px;
+}
+.weixinLogin_bigIco a {
+    background: url(../img/third_login.png)no-repeat;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    display: inline-block;
+    margin: 0;
+    float: none;
+    background-position: -12px -9px;
+}
+.qqLogin_bigIco a:hover {
+    background-position: -72px -55px;
+}
+.alipayLogin_bigIco a:hover{
+	background-position: -132px -55px;
+}
+.weixinLogin_bigIco a:hover{
+	background-position: -12px -55px;
+}
+.qrCode-main {
+    height: 262px;
+    position: relative;
+}
+.qrCode-content {
+    text-align: center;
+    top: 34px;
+    position: relative;
+    margin: 0 auto;
+}
+#qrcodeImg {
+    top: 22px;
+    position: absolute;
+    display: inline-block;
+    width: 146px;
+    height: 146px;
+    z-index: 100;
+    vertical-align: middle;
+    padding: 5px;
+    background: url(../img/xiaz.png)no-repeat;
+}
+.qrCode-help {
+	opacity: 0;
+    position: absolute;
+    display: inline-block;
+    background: url(../img/qrCode-help.png)no-repeat;
+    width: 146px;
+    height: 200px;
+    vertical-align: middle;
+    transition: all 0.3s;
+}
+.haweiapp {
+    color: #007dff;
+}
+.qrCode-desc {
+    margin-bottom: 24px;
+    padding: 0 10px;
+}
+.qrCode-desc p {
+    font-size: 13px;
+    padding: 5px 0;
+    text-align: center;
+}
+.ft {
+    margin: 20px auto;
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+}
+.ft p:first-child {
+    display: block;
+}
+.ft p {
+    display: inline-block;
+}
+.ft p a {
+    font-size: 12px;
+    color: #999;
+}
+.rule {
+    padding: 0 10px;
+}
+.foot_em {
+    font-size: 16px;
+}

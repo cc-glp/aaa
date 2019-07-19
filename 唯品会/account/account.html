@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ACCOUNT</title>
+    <link rel='stylesheet' href='http://www.unitguyver.cn/guyver/model/css1.0.css'>
+    <style>
+        body {
+            font: 12px/1.5 tahoma, arial, Hiragino Sans GB, WenQuanYi Micro Hei, 微软雅黑, 宋体, sans-serif;
+            color: #333;
+        }
+
+        .wrap {
+            width: 100%;
+            background: white;
+            overflow: hidden;
+            font-size: 16px;
+            -o-user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            -khtml-user-select: none;
+            user-select: none;
+        }
+
+        .top {
+            width: 100%;
+            height: 100px;
+        }
+
+        .logo {
+            width: 125px;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: url(https://member-ssl.vipstatic.com/img/passport/sprites-hash-6954197b.png?5a6693d5);
+            background-position: -308px -57px;
+        }
+
+        .other {
+            width: 304px;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: url(https://member-ssl.vipstatic.com/img/passport/sprites-hash-6954197b.png?5a6693d5);
+            background-position: 0 0;
+        }
+
+        .middle {
+            width: 100%;
+            height: 650px;
+            padding: 50px 0;
+            background: url(https://a.vpimg2.com/upload/flow/2019/01/29/88/15487540172274.jpg) top center no-repeat;
+        }
+
+        .foot {
+            width: 100%;
+            height: 80px;
+        }
+
+        .foot p {
+            height: 100%;
+            text-align: center;
+            line-height: 80px;
+            font-size: 13px;
+        }
+
+        .center {
+            width: 1000px;
+            height: 100%;
+            position: relative;
+            left: 50%;
+            margin-left: -500px;
+        }
+
+        .login {
+            width: 360px;
+            position: absolute;
+            right: 0;
+            background: white;
+            display: none;
+        }
+
+        .log_top {
+            height: 50px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
+            padding: 0 30px;
+        }
+
+        .log_top div {
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .log_top div:nth-child(1) {
+            color: #f10180;
+        }
+
+        .log_top div:hover {
+            color: #f10180 !important;
+        }
+
+        .log_img {
+            height: 230px;
+        }
+
+        .log_id {
+            height: 280px;
+            padding: 0 30px;
+            padding-top: 40px;
+            display: none;
+        }
+
+        .log_foot {
+            height: 120px;
+            padding: 30px;
+        }
+
+        .img {
+            width: 100%;
+            height: 192px;
+            position: relative;
+            margin-top: 50px;
+        }
+
+        .img:hover .img1 {
+            left: 25px;
+        }
+
+        .img:hover .img2 {
+            display: block;
+        }
+
+        .img1 {
+            width: 172px;
+            height: 172px;
+            padding: 11px;
+            background: url(https://passport.vip.com/qrLogin/getQrImage?qrToken=10000-9a0bc09cf2a747d7af5fd8c812096c92) 11px center no-repeat;
+            border: 1px solid #f0f0f0;
+            position: absolute;
+            left: 94px;
+            top: 10px;
+            transition: all 0.5s;
+        }
+
+        .img2 {
+            width: 120px;
+            height: 192px;
+            background: url(https://member-ssl.vipstatic.com/img/passport/sprites-hash-6954197b.png?131e7010);
+            background-position: 0 -104px;
+            position: absolute;
+            top: 0;
+            right: 25px;
+            animation: showimg 0.3s ease 0.4s forwards normal;
+            display: none;
+            opacity: 0;
+        }
+
+        @keyframes showimg {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .log_img p {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .log_img p span {
+            color: red;
+        }
+
+        .wx_logo {
+            width: 300px;
+            height: 40px;
+            position: relative;
+            left: 50%;
+            margin-left: -150px;
+        }
+
+        .wx_logo:after {
+            content: '';
+            width: 120px;
+            height: 0;
+            position: absolute;
+            top: 19px;
+            left: 0;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .wx_logo:before {
+            content: '';
+            width: 120px;
+            height: 0;
+            position: absolute;
+            top: 19px;
+            right: 0;
+            border-top: 2px solid #f0f0f0;
+        }
+
+        .wx_logo div {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: 130px;
+            background: url(https://member-ssl.vipstatic.com/img/passport/sprites-hash-6954197b.png?131e7010);
+            background-position: -352px -161px;
+        }
+
+        .log_foot ul {
+            width: 300px;
+            height: 24px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .log_foot ul li {
+            cursor: pointer;
+        }
+
+        .id,
+        .pass,
+        .reg_main>div {
+            width: 300px;
+            height: 46px;
+            color: #333;
+            background-color: #fff;
+            border: 1px solid #b2b2b2;
+            border-radius: 3px;
+            padding: 3px;
+            padding-left: 42px;
+            position: relative;
+        }
+
+        .id input,
+        .pass input,
+        .reg_main>div input {
+            border: none;
+            font-size: 14px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .id i,
+        .pass i,
+        .reg_main i {
+            display: block;
+            background: url(https://member-ssl.vipstatic.com/img/passport/sprites-hash-6954197b.png?131e7010);
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 11.5px;
+            left: 11.5px;
+        }
+
+        .id i {
+            background-position: -468px -161px;
+        }
+
+        .pass i {
+            background-position: -396px -161px;
+        }
+
+        .tip {
+            height: 20px;
+            line-height: 20px;
+            color: transparent;
+            position: relative;
+        }
+
+        .tip1 {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: white;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+
+        .rem1,
+        .rem2 {
+            width: 19px;
+            height: 16px;
+            background: url(https://bootstrap.vipstatic.com/img/ui/sprite.png?d9eadd17);
+            background-position: -48px 0;
+            position: relative;
+            float: left;
+            top: 2px;
+        }
+
+        .rem1:hover {
+            background-position: -24px -21px;
+        }
+
+        .rem2 {
+            display: none;
+            background-position: -24px 0;
+        }
+
+        .rember span:nth-of-type(2) {
+            position: relative;
+            left: 120px;
+        }
+
+        .btn {
+            background-color: #f43499;
+            border: 1px solid #f10180;
+            border-radius: 3px;
+            width: 300px;
+            height: 46px;
+            margin-top: 30px;
+            color: white;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .regist {
+            width: 360px;
+            position: absolute;
+            right: 0;
+            background: white;
+        }
+
+        .reg_ipt_2 {
+            width: 158px !important;
+        }
+
+        .phone {
+            display: block;
+            position: absolute;
+            top: 146px;
+            right: 30px;
+            width: 132px;
+            height: 45px;
+            border: 1px solid #d0d0d0;
+            color: #999;
+            background: #d0d0d0;
+            cursor: not-allowed;
+            border-radius: 3px;
+            text-align: center;
+            line-height: 45px;
+            transition: all 0.3s;
+            z-index: 99;
+        }
+
+        .reg_main {
+            padding: 30px;
+        }
+
+        .reg_top {
+            width: 100%;
+            height: 50px;
+            padding: 0 30px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .reg_now {
+            width: 300px;
+            height: 42px;
+            border: 1px solid #f10180;
+            background-color: #f43499;
+            border-color: #f43499;
+            font-family: "\5FAE\8F6F\96C5\9ED1", Arial, tahoma, sans-serif;
+            font-size: 16px;
+            text-align: center;
+            line-height: 42px;
+            cursor: pointer;
+            border-radius: 3px;
+            color: white;
+            font-weight: 700;
+            margin: 10px auto;
+        }
+
+        .text {
+            display: block;
+        }
+
+        .text>p:nth-child(1) {
+            float: left;
+        }
+
+        .reg_ipt_1 i {
+            background-position: -420px -161px;
+        }
+
+        .reg_ipt_2 i {
+            background-position: -444px -161px;
+        }
+
+        .reg_ipt_3 i {
+            background-position: -396px -161px;
+        }
+
+        .reg_ipt_4 i {
+            background-position: -396px -161px;
+        }
+
+        .turn_to_login {
+            color: #f10180;
+            cursor: pointer;
+        }
+
+        .turn_to_regist:hover {
+            color: #f10180;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="top">
+            <div class="center">
+                <div class="logo"></div>
+                <div class="other"></div>
+            </div>
+        </div>
+        <div class="middle">
+            <div class="center">
+                <div class="login">
+                    <div class="log_top">
+                        <div>扫码登录</div>|
+                        <div>账户登录</div>
+                    </div>
+                    <div class="log_id">
+                        <div class="id"><i></i><input type="text" placeholder="手机号/用户名/邮箱"></div>
+                        <p class="tip">请输入登录名
+                            <span class="tip1">请输入正确格式账号</span>
+                        </p>
+                        <div class="pass"><i></i><input type="text" placeholder="密码"></div>
+                        <p class="tip">请输入密码
+                            <span class="tip1">请输入正确格式密码</span>
+                        </p>
+                        <div class="rember">
+                            <div class="rem1"></div>
+                            <div class="rem2"></div>
+                            <span>记住用户名</span>
+                            <span>忘记密码</span>
+                        </div>
+                        <button class="btn">登录</button>
+                    </div>
+                    <div class="log_img">
+                        <div class="img">
+                            <div class="img1"></div>
+                            <div class="img2"></div>
+                        </div>
+                        <p>打开唯品会<span>APP-个人中心</span>，扫一扫登录 </p>
+                    </div>
+                    <div class="log_foot">
+                        <div class="wx_logo">
+                            <div></div>
+                        </div>
+                        <ul>
+                            <li>新浪微博</li>
+                            <li>QQ</li>
+                            <li>支付宝</li>
+                            <li>更多</li>
+                            <li class="turn_to_regist">免费注册</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="regist">
+                    <div class="reg_top">
+                        <p>会员注册</p>
+                        <p>已注册可<span class="turn_to_login">直接登录</span></p>
+                    </div>
+                    <div class="reg_main">
+                        <span class="phone">获取验证码</span>
+                        <div class="reg_ipt_1"><i></i><input type="text" placeholder="请输入手机号"></div>
+                        <p class="tip">手机号不能为空
+                            <span class="tip1">请输入正确的手机号码</span>
+                        </p>
+                        <div class="reg_ipt_2"><i></i><input type="text" placeholder="请输入验证码"></div>
+                        <p class="tip">请输入6位数字手机验证码</p>
+                        <div class="reg_ipt_3"><i></i><input type="password" placeholder="密码由6-20位字母，数字和符号组合"></div>
+                        <p class="tip">密码不能为空
+                            <span class="tip1">请输入6-20位密码</span>
+                        </p>
+                        <div class="reg_ipt_4"><i></i><input type="password" placeholder="请再次输入上面的密码"></div>
+                        <p class="tip">请输入确认密码
+                            <span class="tip1">密码不正确</span>
+                        </p>
+                        <span class="text">
+                            <p class="rem1"></p>
+                            <p class="rem2"></p>
+                            <p>我已阅读并接受以下条款：<span>《唯品会服务条款》</span><span>《隐私条款》</span><span>《唯品支付用户服务协议》</span></p>
+                        </span>
+                        <p class="tip"></p>
+                        <p class="reg_now">立即注册</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="foot">
+            <div class="center">
+                <p>Copyright 2008-2019 vip.com，All Rights Reserved ICP证：粤 B2-20080329</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src='https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js'></script>
+<script>
+    //判断请求的是登录页还是注册页
+    $(function () {
+        $('input').val('');
+        var local = window.location.search.replace('?', '');
+        if (local == 'login') {
+            $('.regist').hide();
+            $('.login').show();
+        } else if (local == 'regist') {
+            $('.login').hide();
+            $('.regist').show();
+        }
+    })
+    var bool = { login: [], regist: [] };
+    var testnum = 0;
+    //切换至登录
+    $('.turn_to_login').click(function () {
+        $('.regist').hide();
+        $('.login').show();
+    })
+    //切换至注册
+    $('.turn_to_regist').click(function () {
+        $('.login').hide();
+        $('.regist').show();
+    })
+    function isIptTrue(that, bool) {
+        if (bool) {
+            $(that).parent().css('border', '1px solid #b2b2b2');
+            $(that).parent().next('.tip').css('color', 'transparent');
+        } else {
+            $(that).parent().css('border', '1px solid #f64a4a');
+            $(that).parent().next('.tip').css('color', '#f64a4a');
+            if ($(that).val()) {
+                $(that).parent().next('.tip').find('.tip1').show();
+            } else {
+                $(that).parent().next('.tip').find('.tip1').hide();
+            }
+        }
+    }
+    //验证手机号
+    $('.reg_main input').eq(0).bind('input propertychange blur', function () {
+        /[0-9]{11}/.test($(this).val()) ? bool.regist[0] = true : bool.regist[0] = false;
+        if (bool.regist[0]) {
+            $('.phone').css({
+                'color': '#e00078',
+                'background-color': '#fcedf2',
+                'border': '1px solid #ffbee0',
+                'cursor': 'pointer'
+            })
+            bool.phone = true;
+        } else {
+            $('.phone').css({
+                'border': '1px solid #d0d0d0',
+                'color': '#999',
+                'background': '#d0d0d0',
+                'cursor': 'not-allowed'
+            })
+            bool.phone = false;
+        }
+        isIptTrue(this, bool.regist[0]);
+    })
+    //验证验证码
+    $('.reg_main input').eq(1).blur(function () {
+        ($(this).val()) && ($(this).val() == testnum) ? bool.regist[1] = true : bool.regist[1] = false;
+        isIptTrue(this, bool.regist[1]);
+    })
+    //发送验证码
+    $('.phone').click(function () {
+        if (bool.phone) {
+            var num1 = Math.floor(Math.random() * 9) + 1;
+            var num2 = Math.floor(Math.random() * 10);
+            var num3 = Math.floor(Math.random() * 10);
+            var num4 = Math.floor(Math.random() * 10);
+            testnum = Number('' + num1 + num2 + num3 + num4);
+            alert(testnum);
+        }
+    })
+    //验证密码
+    $('.reg_main input').eq(2).blur(function () {
+        /\w{6,20}/.test($(this).val()) ? bool.regist[2] = true : bool.regist[2] = false;
+        isIptTrue(this, bool.regist[2]);
+    })
+    $('.reg_main input').eq(2).focus(function () {
+        if (!bool.tip) {
+            alert('您的账号密码将被记录下来，请不要使用您常用的账号密码，以防信息泄露');
+            bool.tip = true;
+        }
+    })
+    $('.reg_main input').eq(3).blur(function () {
+        (($(this).val()) && ($(this).val() == $('.reg_main input').eq(2).val())) ? bool.regist[3] = true : bool.regist[3] = false;
+        isIptTrue(this, bool.regist[3]);
+    })
+    //验证是否同意协议
+    $('.reg_main .rem1').click(function () {
+        $(this).hide();
+        $('.reg_main .rem2').show();
+        bool.regist[4] = true;
+    })
+    $('.reg_main .rem2').click(function () {
+        $(this).hide();
+        $('.reg_main .rem1').show();
+        bool.regist[4] = false;
+    })
+    //发送注册请求
+    $('.reg_now').click(function () {
+        for (let i = 0; i < 5; i++) {
+            if (!bool.regist[i]) {
+                return;
+            }
+        }
+        $.ajax({
+            type: 'post',
+            url: 'http://www.unitguyver.cn/guyver/project/vip/php/regist.php',
+            data: 'id=' + $('.reg_main input').eq(0).val() + '&pass=' + $('.reg_main input').eq(2).val(),
+            success: function (res) {
+                alert(res);
+            }
+        })
+    })
+    //验证手机号
+    $('.log_id input').eq(0).blur(function () {
+        /[0-9]{11}/.test($(this).val()) ? bool.login[0] = true : bool.login[0] = false;
+        isIptTrue(this, bool.login[0]);
+    })
+    //验证密码
+    $('.log_id input').eq(1).blur(function () {
+        /\w{6,20}/.test($(this).val()) ? bool.login[1] = true : bool.login[1] = false;
+        isIptTrue(this, bool.login[1]);
+    })
+    //是否记住账号密码
+    $('.log_id .rem1').click(function () {
+        $(this).hide();
+        $('.log_id .rem2').show();
+    })
+    $('.log_id .rem2').click(function () {
+        $(this).hide();
+        $('.log_id .rem1').show();
+    })
+    //发送登录请求
+    $('.btn').click(function () {
+        for (let i = 0; i < 2; i++) {
+            if (!bool.login[i]) {
+                return;
+            }
+        }
+        $.ajax({
+            type: 'post',
+            url: 'http://www.unitguyver.cn/guyver/project/vip/php/login.php',
+            data: 'id=' + $('.id input').eq(0).val() + '&pass=' + $('.pass input').eq(0).val(),
+            success: function (res) {
+                alert(res)
+                if (res == '登录成功') {
+                    document.cookie = document.cookie + "; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+                    document.cookie = 'id=' + $('.id input').eq(0).val() + '; path=/';
+                    window.location = '../index.html';
+                }
+            }
+        })
+    })
+    $('input').focus(function () {
+        $(this).parent().css('border', '1px solid #b2b2b2');
+        $(this).parent().next('.tip').css('color', 'transparent');
+    })
+    $('.log_top div').click(function () {
+        if ($(this).index() == 1) {
+            $('.log_img').hide();
+            $('.log_id').show();
+            $(this).css('color', '#f10180');
+            $($('.log_top div')).eq(0).css('color', '#333');
+        } else {
+            $('.log_id').hide();
+            $('.log_img').show();
+            $(this).css('color', '#f10180');
+            $($('.log_top div')).eq(1).css('color', '#333');
+        }
+    })
+</script>
+
+</html>

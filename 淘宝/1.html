@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <span>全选 / 全不选</span> <input type='checkbox' class="cro">
+    <div>
+        <br>
+        <input type='checkbox'>
+        <br>
+        <input type='checkbox'>
+        <br>
+        <input type='checkbox'>
+        <br>
+        <input type='checkbox'>
+        <br>
+        <input type='checkbox'>
+        <br>
+        <input type='checkbox'>
+    </div>
+
+
+</body>
+<script src="./js/jquery.js"></script>
+<script>
+
+    var cro = document.getElementsByClassName('cro')[0]
+    var div=document.getElementsByTagName('div')[0]
+    var ipt=div.getElementsByTagName('input')
+    cro.onclick = function () {
+        for (var i =0;i<ipt.length;i++){
+            if(ipt[i].checked){
+                ipt[i].checked=false
+            }else{
+                ipt[i].checked=true
+            }
+        }
+}
+
+</script>
+
+</html>

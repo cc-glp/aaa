@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>localStorage</title>
+	</head>
+	<body>
+		<form>
+			<table border="0" cellspacing="" cellpadding="">
+				<tr>
+					<td>用户名:</td>
+					<td><input type="text" name="user" id="user" value="" /></td>
+				</tr>
+				<tr>
+					<td>密&nbsp;&nbsp;&nbsp;码:</td>
+					<td><input type="password" name="pass" id="pass" value="" /></td>
+				</tr>
+				<tr>
+					<td><input type="submit" name="zc" id="zc" value="注册" /></td>
+					<td><input type="button" name="dl" id="dl" value="登录" /></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+	<script type="text/javascript">
+		var user = document.getElementById('user')
+		var pass = document.getElementById('pass')
+		var zhuce = document.getElementById('zc')
+		var dl = document.getElementById('dl')
+		if(window.localStorage.userArr){
+			var arr=JSON.parse(window.localStorage.userArr)
+		}else{
+			var arr=[]
+		}
+		zhuce.onclick = function() {
+		var username=user.value
+		var password=pass.value
+		for(var i=0;i<arr.length;i++){
+			if(username==arr[i].userName){
+				alert('该账号已存在')
+				return
+			}
+		}
+		var obj={userName:username,passWord:password}
+		arr.push(obj)
+		window.localStorage.userArr=JSON.stringify(arr)
+		alert('用户创建成功')
+		}
+		dl.onclick=function(){
+		var username=user.value
+		var password=pass.value
+		var ishad=false
+		var index=0
+		for(var i=0;i<arr.length;i++){
+			if(username==arr[i].userName){
+				ishad=true
+				index=i;
+			}
+		}
+		if(ishad){
+			if(password==arr[index].passWord){
+				alert('登录成功')
+				window.location.href='空白页.html'
+				localStorage.setItem('user',username)
+			}else{
+				alert('密码错误')
+			}}else{
+				alert('账号不存在或输入错误')
+			}
+		
+		}
+	</script>
+</html>

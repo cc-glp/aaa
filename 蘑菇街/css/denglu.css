@@ -1,0 +1,261 @@
+body{
+    background: #f5f5f5;
+}
+.wrap{
+    
+}
+.logo_wrap{
+    width: 100%;
+    background-color: #fff;
+    padding: 20px 0;
+}
+.logo{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+.logo_icon{
+    position: relative;
+    top: 4px;
+    display: inline-block;
+    width: 130px;
+    height: 57px;
+    background-size: contain;
+    overflow: hidden;
+}
+.logo_icon img{
+    position: absolute;
+    top: -28px;
+    width: 100%;
+}
+.logo_text{
+    position: absolute;
+    top: 12px;
+    display: inline-block;
+    height: 28px;
+    width: 861px;
+    margin-left: 20px;
+    background-color: #ffefef;
+    border: 1px solid #ffc0cc;
+    text-align: center;
+    line-height: 28px;
+    font-size: 11px;
+    color: #666;
+}
+.content{
+    width: 100%;
+    background: url(../img/banner.png) center center no-repeat;
+    height: 600px;
+}
+.content_left{
+    width: 62.5%;
+    float: left;
+    height: 600px;
+}
+.content .content_right{
+    width: 365px;
+    float: left;
+    padding: 0 0 30px 44px;
+    background-color: #ffeceb;
+    margin-top: 80px;
+    opacity: .9;
+    position: relative;
+}
+.hidden{
+    display: none;
+}
+.toggle{
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+.toggle_icon1{
+    height: 46px;
+    width: 46px;
+    background: url(../img/icon.png) no-repeat;
+}
+.toggle_icon2{
+    position: relative;
+    height: 380px;
+    width: 100%;
+}
+.toggle_icon2 .toggle{
+    height: 53px;
+    width: 53px;
+    background: url(../img/icon2.png) no-repeat;
+}
+.toggle_icon2-1{
+    position: absolute;
+    height: 80px;
+    left: 60px;
+    top: 30px;
+    width: 200px;
+    background: url(../img/icon2-1.png) no-repeat;
+}
+.toggle_icon2-2,.toggle_icon2 a{
+    position: absolute;
+    width: 200px;
+    left: 50%
+}
+.toggle_icon2 a{
+    font-size: 18px;
+    text-decoration: underline;
+    height: 30px;
+    bottom: 0;
+    font-family: Microsoft YaHei;
+    margin-left: -100px;
+}
+.toggle_icon2-2{
+    height: 200px;
+    font-size: 14px;
+    line-height: 200px;
+    margin-left: -122px;
+    top: 100px;
+}
+.toggle_icon2-2 span{
+    border-radius: 3px;
+    background: url(../img/注册.png) no-repeat;
+    background-color: #fff;
+    border: 4px solid #fff;
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    height: 33px;
+    width: 33px;
+    margin-top: -25px;
+    margin-left: -17px;
+    z-index: 999;
+}
+.logo_tab {
+    height: 70px;
+    margin-left: -38px;
+}
+.f1{
+    float: left;
+}
+.logo_tab .mod {
+    width: 50%;
+    border-bottom: 1px solid #ccc;
+}
+.logo_tab a {
+    height: 43px;
+    line-height: 42px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: #3c3c3c;
+}
+.logo_tab .lo_mod {
+    display: block;
+    width: 119px;
+    margin: 10px auto 0;
+}
+.logo_tab .tab_on {
+    color: #fe617a;
+    height: 41px;
+    border-bottom: 2px solid #ff4066;
+}
+.logo_tab .eb_mod {
+    display: block;
+    width: 119px;
+    margin: 10px 30px 0;
+}
+.cuowu{
+    background: url(https://s10.mogucdn.com/pic/140408/o613k_kqzfunswozbg2s2ugfjeg5sckzsew_16x16.png) 12px no-repeat #fffff8;
+    border: 1px solid #ffd797;
+    height: 30px;
+    line-height: 30px;
+    color: #ff1877;
+    width: 273px;
+    padding-left: 40px;
+    margin-bottom: 9px;
+    display: none;
+}
+.tishi{
+    border: 1px solid #ffd797;
+    height: 30px;
+    line-height: 30px;
+    color: #ff1877;
+    width: 273px;
+    padding-left: 40px;
+    margin-bottom: 9px;
+    text-align: center;
+    display: none;
+}
+.mod_box{
+    margin-bottom: 15px;
+}
+.mod_ZC_text{
+    background: none!important;
+    border: 1px solid #ccc;
+    padding: 0 6px;
+    height: 40px;
+    width: 300px
+}
+.YZimg{
+    width: 300px;
+    height: 190px;
+    margin-left: 7px;
+    position: relative;
+    background: url(../img/timg_WPS图片.jpg);
+    background-size: contain;
+    display: none;
+}
+.box1{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    margin-top:-10px; 
+    background: url(../img/timg_WPS图片.jpg);
+    background-position: -217px -85px;
+}
+.box2{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    margin-top:-10px; 
+    left: 217px;
+    background: white;
+    opacity: 0.3;
+}
+.mod_WM{
+    display: none;
+}
+.mod_WM a{
+    display: inline-block;
+    width: 110px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    margin-right: 10px;
+    color: #fff;
+    background-color: #ff5777;
+}
+.ms{
+    width: 180px;
+    margin-left: -4px;
+}
+.sub,.sub1{
+    display: inline-block;
+    border: none;
+    width: 314px;
+    height: 40px;
+    background: #ff5777;
+    border-radius: 2px;
+    cursor: pointer;
+    color: #fff;
+}
+.WJ{
+    padding-top: 20px;
+    padding-right: 44px;
+    text-align: right;
+}
+.WJ a{
+    text-decoration: underline;
+    color: #959595;
+    margin-right: 20px
+}

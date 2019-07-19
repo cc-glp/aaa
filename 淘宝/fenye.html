@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 淘宝网 - 淘！我喜欢</title>
+    <link rel="stylesheet" href="./common.css">
+    <link rel="stylesheet" href="./font_h2931dea95d/iconfont.css">
+    <style>
+        .content {
+            width: 992px;
+            margin: 20px auto;
+            border: 1px solid lightgrey;
+            padding: 25px;
+        }
+
+        .left {
+            width: 417px;
+            height: 417px;
+            float: left;
+            text-align: center;
+            position: relative;
+        }
+
+        .left>img {
+            width: 417px;
+            height: 417px;
+        }
+
+        .right {
+            float: right;
+            width: 530px;
+            height: 30px;
+        }
+
+        .right>h4 {
+            padding-bottom: .2em;
+            line-height: 1;
+            font-size: 16px;
+            font-weight: 700;
+            color: #000;
+            margin-top: 20px;
+        }
+
+        .tm-fcs-panel {
+            background-color: #e9e9e9;
+            background-repeat: no-repeat;
+            position: relative;
+            left: 0;
+            z-index: 10;
+            font: 12px/1.5 "Microsoft Yahei", tahoma, arial;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            margin-right: 20px;
+            margin-top: 10px;
+        }
+
+        .tm-price-panel {
+            position: static;
+            color: #333;
+            padding-left: 0;
+        }
+
+        .tb-meta {
+            margin: 5px 20px 5px 0;
+            color: #666;
+            height: 30px;
+            margin-top: 10px;
+        }
+
+        .tm-ind-panel {
+            border: 1px dotted #c9c9c9;
+            border-width: 1px 0;
+            margin: -1px 20px 0 0;
+            padding: 10px 0;
+            position: relative;
+            overflow: hidden;
+            clear: both;
+            display: flex;
+        }
+
+        .tm-ind-panel>li {
+            float: left;
+            width: 33%;
+            text-align: center;
+            position: relative;
+            left: -1px;
+            border-left: 1px solid #e5dfda;
+            flex: 1;
+            line-height: 16px;
+        }
+
+        .tb-key {
+            margin-top: 20px;
+        }
+
+        .number {
+            padding: 3px 2px 0 3px;
+            line-height: 26px;
+            width: 30px;
+            margin-left: 10px;
+            display: inline-block;
+            border: 1px solid gray;
+        }
+
+        .chima {
+            position: relative;
+        }
+
+        .chima>span {
+            cursor: pointer;
+            position: absolute;
+            left: 80px;
+            background: lightgrey;
+        }
+
+        .number {
+            text-align: center;
+        }
+
+        .maimaimai {
+            padding: 10px 0 0 66px;
+            margin: 10px 0 0;
+        }
+
+        .liji,
+        .gouwuche {
+            margin-right: 0;
+            float: left;
+            overflow: hidden;
+            position: relative;
+            width: 170px;
+            background-color: #ffeded;
+            border: 1px solid #FF0036;
+            color: #FF0036;
+            font-family: 'Microsoft Yahei';
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        .gouwuche {
+            background-color: #ff0036;
+            border: 1px solid #ff0036;
+            color: #fff;
+        }
+
+        .gouwuche:hover {
+            cursor: pointer;
+        }
+
+        .left {
+            position: relative;
+        }
+
+        .fangdajing {
+            position: absolute;
+            left: 450px;
+            top: 0px;
+            width: 417px;
+            height: 417px;
+            background: red;
+            z-index: 90;
+            display: none;
+        }
+
+        .fangdajing>div {
+            width: 417px;
+            height: 417px;
+            position: relative;
+            display: none;
+        }
+
+        .fangdajing>div>img {
+            width: 200%;
+            height: 200%;
+        }
+
+        .left>img {
+            cursor: crosshair;
+        }
+
+        .fugai {
+            width: 206px;
+            height: 206px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            display: none;
+            z-index: 90;
+            background: url(https://img-tmdetail.alicdn.com/tps/i4/T12pdtXaldXXXXXXXX-2-2.png);
+        }
+
+        .foot {
+            width: 1190px;
+            margin: auto;
+        }
+
+        .foot>img {
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head"></div>
+    <div class="content clearfix">
+        <div class="left">
+            <div class="fugai"></div>
+            <img src="https://gma.alicdn.com/bao/uploaded/i2/57740456/O1CN01JyIibX1FEt7yPplSe_!!0-saturn_solar.jpg_200x200.jpg_.webp"
+                alt="" style="position: relative">
+            <div class="fangdajing">
+                <div>
+                    <img src="https://gma.alicdn.com/bao/uploaded/i2/57740456/O1CN01JyIibX1FEt7yPplSe_!!0-saturn_solar.jpg_200x200.jpg_.webp"
+                        alt=""></div>
+
+            </div>
+        </div>
+        <div class="right ">
+            <h4>
+
+            </h4>
+            <div class="tm-fcs-panel">
+                <div class="tm-price-panel" style="padding-left: 20px">
+                    <span>价格</span> ￥<span style="text-decoration: line-through">180</span>
+                </div>
+                <div class="cuxiaojia" style="padding-left: 20px">
+                    <span>促销</span><em>￥</em><span style="color: red;font-size:20px;" class="price">20</span>
+                </div>
+            </div>
+            <div class="tb-meta">
+                <span>运费</span> <span>河北石家庄 至太原 》 快递 ：0</span>
+            </div>
+            <div class="tm-ind-panel">
+                <li>月销量<span class="xioaliang" style="font-size: 20px;color:red;">12</span> </li>
+                <li>累计评价<span style="font-size: 20px;color:red;">592</span></li>
+                <li>送天猫积分<span style="font-size: 20px;color:red;">12</span></li>
+            </div>
+            <div class="tb-key">
+                <div class="chima">
+                    尺码 &nbsp;&nbsp;&nbsp;&nbsp; s &nbsp;&nbsp;&nbsp; m &nbsp;&nbsp;&nbsp; l&nbsp;&nbsp;&nbsp;
+                </div>
+                <div class="chima" style="margin-top: 20px;">
+                    颜色分类 &nbsp;&nbsp;&nbsp;&nbsp;white &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; blank&nbsp;&nbsp;&nbsp;
+                </div>
+                <div class="chima" style="margin-top: 20px">
+                    数量 <div class="number">1</div> <span class="jia"> ++ </span><span class="jian"
+                        style="top:19px">----</span>
+                </div>
+            </div>
+            <div class="maimaimai clearfix" style="margin-top:20px;">
+                <div class="liji"> 立即购买 </div>
+                <div class="gouwuche"> 加入购物车 </div>
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        <img src="./img/show1.png" alt="">
+        <img src="./img/show2.png" alt="">
+        <img src="./img/show3.png" alt="">
+        <img src="./img/show4.png" alt="">
+        <img src="./img/show5.png" alt="">
+    </div>
+
+</body>
+<script src="./js/jquery.js"></script>
+<script>
+    // 数量加减
+    $('.head').load('./head.html')
+    $('.jia').click(function () {
+        var vv = $('.number').text()
+        console.log(vv)
+        vv++
+        $('.number').text(vv)
+    })
+    $('.jian').click(function () {
+        var vv = $('.number').text()
+        console.log(vv)
+        vv--
+        if (vv < 1) {
+            vv = 1
+        }
+        $('.number').text(vv)
+    })
+
+    function getUrlParams(name) {
+        var re = new RegExp('(^|&)' + name + '=([^&]*)(&|$)')
+        var r = window.location.search.substr(1).match(re)
+        if (r == null) {
+            return;
+        } else {
+            return r[2];
+        }
+    }
+    console.log(getUrlParams('index'))
+    // 让页面有东西
+    if (getUrlParams('index')) {
+        var ii = getUrlParams('index')
+        $.ajax({
+            type: 'get',
+            url: './main.json',
+            date: {},
+            dateType: 'json'
+        }).then(function (str) {
+            var q = str.content[ii]
+            $('.left>img').attr('src', q.imgSrc)
+            $('.right>h4').html(q.title)
+            $('.price').html(q.price)
+        })
+    }
+    // 是否登陆
+    $('.gouwuche').click(function () {
+        if (getUrlParams('username')) {
+            if (localStorage.getItem(getUrlParams('username')) != null) {
+                var obj = JSON.parse(localStorage.getItem(getUrlParams('username')))
+                if (obj[getUrlParams('index')] != null) {
+                    var yuan = parseInt(obj[getUrlParams('index')].num)
+                    var jia = parseInt($('.number').html())
+                    var num = jia + yuan
+                    obj[getUrlParams('index')] = {
+                        num: num,
+                        price: $('.price').html(),
+                        index: getUrlParams('index')
+                    }
+                }else {
+                    obj[getUrlParams('index')] = {
+                        num: $('.number').html(),
+                        price: $('.price').html(),
+                        index: getUrlParams('index')
+                    }
+                }
+
+                localStorage.setItem(getUrlParams('username'), JSON.stringify(obj))
+            } else {
+                var obj = new Object();
+                obj.username = getUrlParams('username')
+                obj[getUrlParams('index')] = {
+                    num: $('.number').html(),
+                    price: $('.price').html(),
+                    index: getUrlParams('index')
+                }
+                localStorage.setItem(getUrlParams('username'), JSON.stringify(obj))
+            }
+            var li = confirm('已经加入购物车是否查看')
+            if (li) {
+                window.open('./gouwuche.html?username=' + getUrlParams('username'))
+            }
+        } else {
+            var ll = confirm('你还没有登陆是否登陆')
+            if (ll == true) {
+                window.open('./denglu.html')
+            }
+        }
+    })
+    $('.fagai').hide()
+    $('.left').mouseover(function () {
+        $('.fagai').show()
+    })
+    // $('.left').mousemove(function(ev){
+
+    //     var x=ev.clientX-parseInt($('.fugai').css('width'))/2-parseInt($('.fugai').offset().left) 
+    //     var y=ev.clientY-parseInt($('.fugai').css('height'))/2-parseInt($('.fugai').offset().top) 
+    //     $('.fugai').css('left',x)
+    //     console.log(x)
+    //     // $()
+    // })
+
+</script>
+
+</html>

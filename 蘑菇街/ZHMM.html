@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <style>
+        .registerbox {
+            width: 900px;
+            margin: 0 auto;
+            padding: 27px 0 33px;
+            min-height: 580px;
+        }
+
+        .re_hd {
+            padding: 27px 0 33px;
+        }
+
+        .re_hd a {
+            background: url(https://s10.mogucdn.com/p1/160408/upload_ie4gkmjvgvqtiytdg4zdambqgiyde_220x52.png) no-repeat;
+            display: inline-block;
+            width: 220px;
+            height: 52px;
+        }
+
+        .re_bd {
+            margin-top: 35px;
+            border: 1px solid #ddd;
+            padding: 80px 30px;
+            background-color: #fff;
+        }
+
+        .bd_title {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .step_box {
+            width: 798px;
+            overflow: hidden;
+            margin: 20px 0 60px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .step_box ul {
+            margin-right: -300px;
+            margin-left: 100px;
+        }
+
+        .step_box ul li {
+            background-color: #fff;
+            display: inline-block;
+            margin-right: 160px;
+        }
+
+        .step_box li span {
+            background-position: 22px 0;
+            padding-top: 35px;
+            color: #999;
+            width: 76px;
+            text-align: center;
+        }
+
+        .seqNumber {
+            font-size: 24px;
+        }
+
+        .formbox {
+            padding-left: 200px;
+            min-height: 260px;
+        }
+
+        .subbox {
+            padding-left: 100px;
+            margin-bottom: 20px;
+        }
+
+        .registerbox .btn_check {
+            background-image: url(https://s10.mogucdn.com/p1/160325/upload_ifqtkyzwg4zgimryg4zdambqgyyde_270x150.png);
+            background-repeat: no-repeat;
+            display: inline-block;
+            width: 122px;
+            height: 36px;
+            line-height: 36px;
+            font-size: 14px;
+            text-align: center;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .formbox li {
+            margin-bottom: 15px;
+            clear: both;
+            zoom: 1;
+        }
+
+        .normalText {
+            padding: 0 4px;
+            width: 240px;
+            height: 34px;
+            line-height: 34px;
+            border: 1px solid #dedede;
+            border-radius: 4px;
+        }
+
+        .error {
+            padding-left: 33px;
+            color: #ff5783;
+            background-position: 10px -39px;
+            background-image: url(https://s10.mogucdn.com/p1/160325/upload_ifqtkyzwg4zgimryg4zdambqgyyde_270x150.png);
+            background-repeat: no-repeat;
+        }
+
+        #_content {
+            margin-left: 100px;
+        }
+
+        .nohl {
+            user-select: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+        .shieldcaptain-warpper {
+            max-width: 414px;
+        }
+
+        .shieldcaptain-warpper .desc {
+            overflow: hidden;
+        }
+
+        .shieldcaptain-warpper .desc>span {
+            color: #666;
+            float: left;
+            font-size: 12px;
+        }
+
+        .shieldcaptain-warpper .desc>a {
+            float: right;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .shieldcaptain-warpper .img-con {
+            position: relative;
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        .shieldcaptain-warpper .img-con .img-list {
+            font-size: 0;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .shieldcaptain-warpper .img-con .img-list li {
+            list-style: none;
+            display: inline-block;
+            vertical-align: middle;
+            width: 24.25%;
+            background-image: url('./img/IMG.jpg');
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            cursor: pointer;
+            transition: all ease 0.2s;
+            margin-right: 1%;
+        }
+
+        .shieldcaptain-warpper .img-con .img-list li:nth-child(1) {
+            background-position: 0 0;
+        }
+
+        .shieldcaptain-warpper .img-con .img-list li:nth-child(2) {
+            background-position: 33.33% 0;
+        }
+
+        .shieldcaptain-warpper .img-con .img-list li:nth-child(3) {
+            background-position: 66.66% 0;
+        }
+
+        .shieldcaptain-warpper .img-con .img-list li:nth-child(4) {
+            background-position: 100% 0;
+            margin-right: 0;
+        }
+
+        .shieldcaptain-warpper .img-con .img-list li:after {
+            content: '';
+            display: block;
+            width: 100%;
+            padding-top: 100%;
+        }
+
+        .shieldcaptain-warpper .img-con .success-con {
+            position: absolute;
+            display: none;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .shieldcaptain-warpper .img-con .success-con p {
+            font-size: 12px;
+            color: #333;
+            display: block;
+            position: absolute;
+            text-align: center;
+            top: 50%;
+            line-height: 32px;
+            margin-top: -16px;
+            width: 100%;
+        }
+
+        .registerbox .red_txt {
+            color: #ff5783;
+        }
+
+        .formbox h3 {
+            font-size: 14px;
+            color: #333;
+            font-weight: 700;
+            margin-bottom: 15px;
+            padding-left: 12px;
+        }
+
+        .formbox .label_title {
+            width: 100px;
+            text-align: right;
+            float: left;
+            display: inline;
+            font-size: 14px;
+            color: #666;
+            line-height: 36px;
+        }
+
+        .formbox .inputbox {
+            margin-left: 100px;
+        }
+
+        .phonecheck_box .normalText {
+            width: 94px;
+        }
+
+        .phone_box .btn_phone,
+        .problem_box .btn_phone {
+            display: inline-block;
+            width: 100px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            border: 1px solid #ccc;
+            color: #000;
+            margin-left: 10px;
+            border-radius: 3px;
+        }
+
+        .phonecheck_box .js_getcheck,
+        .problem_box .js_getcheck {
+            background: url(https://s10.mogucdn.com/pic/140328/o613k_kqzfmscmozbg2zdwgfjeg5sckzsew_42x24.png) repeat-x;
+        }
+
+        .formbox .tips {
+            padding-left: 5px;
+            color: #999;
+            line-height: 22px;
+            vertical-align: middle;
+        }
+
+        .formbox .error {
+            padding-left: 33px;
+            color: #ff5783;
+            background-position: 10px -39px;
+        }
+
+        .formbox .pwdsettip {
+            margin-left: 50px;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #ff1877;
+        }
+
+        .modelform {
+            width: 793px;
+            padding-bottom: 20px;
+            overflow: hidden;
+            padding-top: 20px;
+            min-height: 260px;
+            margin-top: 30px;
+            margin-left: -60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="registerbox">
+            <div class="re_hd">
+                <a href="javascript:;"></a>
+            </div>
+            <div class="re_bd">
+                <h3 class="bd_title">安全设置-找回密码</h3>
+                <div class="step_box step1_box">
+                    <ul>
+                        <li>
+                            <span class="seqNumber">01/</span>
+                            <span>输入登录名</span>
+                        </li>
+                        <li class="no2">
+                            <span class="seqNumber">02/</span>
+                            <span>验证信息</span>
+                        </li>
+                        <li class="no3">
+                            <span class="seqNumber">03/</span>
+                            <span>重置密码</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="formbox formbox1" style="display: block">
+                    <ul>
+                        <li>
+                            <div style="margin-left: 55px;">
+                                <span style="font-size: 14px;">账号：</span>
+                                <input type="text" name="username" class="normalText" placeholder="请输入用户名/邮箱/手机">
+                            </div>
+                        </li>
+                        <li>
+                            <p class="error" style="display: none;margin-left: 55px;"></p>
+                            <div id="_content" class="nohl" style="display: none">
+                                <div class="shieldcaptain-warpper nohl">
+                                    <div class="desc">
+                                        <span>请点击图片旋转至正向朝上</span>
+                                        <a href="javascript:void(0)">换一组</a>
+                                    </div>
+                                    <div class="img-con">
+                                        <ul class="img-list">
+                                            <li style="transform: rotate(0deg);"></li>
+                                            <li style="transform: rotate(0deg);"></li>
+                                            <li style="transform: rotate(0deg);"></li>
+                                            <li style="transform: rotate(0deg);"></li>
+                                        </ul>
+                                        <div class="success-con" style="display: none;">
+                                            <p>验证成功</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="subbox subbox1">
+                        <a class="btn_check next" href="javascript:;">下一步</a>
+                    </div>
+                </div>
+                <div class="formbox formbox2" style="display:none;">
+                    <h3 class="">
+                        已向你的手机号码
+                        <span class="red_txt">
+                        </span>
+                        发送验证码，请在下方输入：
+                    </h3>
+                    <ul>
+                        <li class="phone_box">
+                            <label for="" class="label_title">
+                                手机验证码：
+                            </label>
+                            <div class="ui-item inputbox validateitem">
+                                <input type="text" class="ui-input normalText">
+                                <a href="javascript:;" class="btn_phone">
+                                    重新发送
+                                </a>
+                                <p class="error" style="display: none;"></p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="subbox subbox2">
+                        <a class="btn_check next" href="javascript:;">下一步</a>
+                    </div>
+                </div>
+                <div class="formbox formbox3" style="display: none">
+                    <h3 class="pwdsettip">*恭喜你！验证成功，请重置密码并妥善保管</h3>
+                    <div class="modelform">
+                        <p class="ui-item validateitem inputbox passwordbox">
+                            <span class="uname-title">输入新密码</span>
+                            <input type="password" class="ui-input normalText display_u js_text_input js-pwd"
+                                data-type="newpassword" id="js_passbox" autocomplete="off" placeholder="设置您的密码">
+                            <span class="password-complex"></span> <input type="hidden" class="passComplexLevel"> <span
+                                class="tips display_u"></span>
+                            <span class="newpasslevel error hide">密码需含英文及数字，长度为6位－20位</span>
+                        </p>
+                        <p class="ui-item validateitem inputbox passwordbox" style="margin-top: 20px;">
+                            <span class="uname-title">确认新密码</span>
+                            <input type="password" class="ui-input normalText display_u js_text_input js-pwd"
+                                data-type="newpassword" id="js_passbox1" autocomplete="off" placeholder="设置您的密码">
+                            <span class="password-complex"></span> <input type="hidden" class="passComplexLevel"> <span
+                                class="tips display_u"></span>
+                            <span class="newpasslevel error hide">密码需含英文及数字，长度为6位－20位</span>
+                        </p>
+                        <div class="subbox subbox3" style="margin-top:20px; margin-left:80px;">
+                            <a class="btn_check next" href="javascript:;">确认</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/jquery-3.2.1.min.js"></script>
+<script src="./js/cookie.js"></script>
+<script>
+    var arrZ = ['rotate(0deg)', 'rotate(90deg)', 'rotate(180deg)', 'rotate(270deg)']
+
+    var index1 = 0;
+    var index2 = 0;
+    var flage = false;
+    var falg = false;
+    var text1 = null;
+    var aa = bb = cc = dd = 0;
+    $('.subbox1').click(function () {
+
+        if ($('.normalText').first().val() == '') {
+            $('.error').first.show().html('用户名不能为空')
+        } else {
+            $('#_content').show()
+            if (!falg) {
+                var userN = document.cookie.split(';')[0].split('=')[1].split('[')[1].split(']')[0].split()[0].split(',{')
+                userN.forEach(function (item, i) {
+                    if (i == 0) {
+                        var arr2 = item.split('{')[1].split('}')[0].split(',')[0].split(':')[1].split('"')[1]
+                    } else {
+                        var arr2 = item.split('}')[0].split(',')[0].split(':')[1].split('"')[1]
+                    }
+                    if ($('.normalText').first().val() == arr2) {
+                        $('.error').first().hide()
+                        falg = true;
+                    } else {
+                        $('.error').first().show().html('用户名不存在')
+                    }
+                });
+            } else {
+                if (!flage) {
+                    flage = true;
+                    $.each($('.img-list li'), function (i) {
+                        var number = parseInt(Math.random() * 4)
+                        $('.img-list li').eq(i).css('transform', arrZ[number])
+                    })
+                }
+                if (flage) {
+                    $.each($('.img-list li'), function (i) {
+                        var arrA = $(this).css('transform').split('(')[1].split(')')[0].split(',')
+                        var a = arrA[0]
+                        var b = arrA[1]
+                        var c = arrA[2]
+                        var d = arrA[3]
+                        var Deg = Math.round(Math.atan2(b, a) * (180 / Math.PI));
+                        if (i == 0) {
+                            if (Deg == 90) {
+                                aa = 1;
+                            }
+                        } else if (i == 1) {
+                            if (Deg == 90) {
+                                bb = 1
+                            }
+                        } else if (i == 2) {
+                            if (Deg == -90) {
+                                cc = 1
+                            }
+                        } else if (i == 3) {
+                            if (Deg == -90) {
+                                dd = 1
+                            }
+                        }
+                    })
+                    if (aa == 1 && bb == 1 && cc == 1 && dd == 1) {
+                        text1 = $('.normalText').first().val()
+
+                        $('.success-con').show();
+                        index2 = FS();
+                        alert(index2)
+                        setTimeout(function () {
+                            // window.location.reload();
+                            $('.formbox1').hide();
+                            $('.formbox2').show();
+                            $('.red_txt').html(text1.slice(0, 3) + '****' + text1.slice(6))
+                        }, 700)
+
+                    }
+                }
+            }
+
+        }
+
+    })
+    $('.desc a').click(function () {
+        $.each($('.img-list li'), function (i) {
+            var number = parseInt(Math.random() * 4)
+            $('.img-list li').eq(i).css('transform', arrZ[number])
+
+        })
+    })
+    $('.img-list li').on('click', function () {
+        var arrA = $(this).css('transform').split('(')[1].split(')')[0].split(',')
+        var a = arrA[0]
+        var b = arrA[1]
+        var c = arrA[2]
+        var d = arrA[3]
+        var Deg = Math.round(Math.atan2(b, a) * (180 / Math.PI));
+        var Deg1 = Deg + 90;
+        if (Deg1 == 360) {
+            $(this).css({ 'transform': 'rotate(0deg)' })
+        }
+        $(this).css({ 'transform': 'rotate(' + Deg1 + 'deg)' })
+    })
+    //发送验证码
+    function FS() {
+        var y1 = String(parseInt(Math.random() * 9 + 0.5))
+        var y2 = String(parseInt(Math.random() * 9 + 0.5))
+        var y3 = String(parseInt(Math.random() * 9 + 0.5))
+        var y4 = String(parseInt(Math.random() * 9 + 0.5))
+        var a = y1 + y2 + y3 + y4;
+        var b = parseInt(a)
+        return b;
+    }
+    $('.btn_phone').click(function () {
+        index2 = FS();
+        alert(index2);
+    })
+    $('.normalText').eq(1).blur(function () {
+        if ($('.normalText').eq(1).val() == '') {
+            $('.error').eq(1).show().html('验证码不能为空')
+        } else if ($('.normalText').eq(1).val() != index2) {
+            $('.error').eq(1).show().html('请输入正确的验证码')
+        } else {
+            $('.subbox2').on('click', function () {
+                setTimeout(function () {
+                    $('.formbox2').hide();
+                    $('.formbox3').show();
+                }, 700)
+            })
+        }
+    })
+
+
+    //确认密码if
+    var reg = /[a-z0-9A-Z]{6,16}/
+    $(".newpasslevel").hide()
+    $("#js_passbox").blur(function(){
+        if(!reg.test($("#js_passbox").val())){
+            $(".newpasslevel").eq(0).html("请输入正确格式").show() 
+        }else{
+            $(".newpasslevel").eq(0).hide()
+        }
+    })
+    $("#js_passbox1").blur(function(){
+        if($("#js_passbox").val()!=$("#js_passbox1").val()){
+            $(".newpasslevel").eq(1).html("两次输入不一致").show()
+        }else{
+            $(".newpasslevel").eq(1).hide()
+        }
+        
+    })
+    $(".subbox3").click(function(){
+        arr = JSON.parse(getCookie('userArr'));
+        var username = text1
+        var password = $("#js_passbox").val()
+        var obj = {
+            username:username,
+            password:password
+        }
+        arr.push(obj)
+        var Jarr = JSON.stringify(arr)
+        setCookie("userArr",Jarr,14)
+        alert('设置成功，请重新登录')
+        setTimeout(function(){
+            window.location.href = './denglu.html'
+        })
+    })
+</script>
+
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车</title>
+	<link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/gwc.css">
+	<script src="./js/jquery.js"></script>
+	<script src="./js/cookie.js"></script>
+	<script src="./js/gwcNR.js"></script>
+</head>
+
+<body>
+    <div class="page">
+        <div class="nav">
+			<div class="nav-center">
+				<div class="left">
+					<i></i>
+					<span>北京</span>
+					<div class="diqu">
+						<img src="./img/index_pic/地区.png" width="300px" height="320px"
+							style="float: left; margin-top: 18px; margin-left: 10px;" />
+					</div>
+				</div>
+				<div class="right">
+					<ul>
+						<li>
+							<span onclick="window.open('./login.html','_self')">你好，请登录&nbsp;&nbsp;</span>
+							<p onclick="window.open('./zhuce.html','_self')">免费注册</p>
+						</li>
+						<li></li>
+						<li>我的订单</li>
+						<li></li>
+						<li>我的京东
+							<!--<img src="img/xia.png" height="9px" width="12px"/>-->
+							<div class="boxone">
+								<img src="./img/index_pic/我的京东.png" height="150px" width="270px"
+									style="float: left; margin-left: 5px; margin-top: 5px;" />
+							</div>
+						</li>
+						<li></li>
+						<li>京东会员</li>
+						<li></li>
+						<li>企业采购
+							<!--<img src="img/xia.png" height="9px" width="12px"/>-->
+							<div class="boxer">
+								<img src="./img/index_pic/企业采购.png" height="51px" width="145px"
+									style="float: left; margin-top: 9px; margin-left: 5px;" />
+							</div>
+						</li>
+						<li></li>
+						<li>
+							客户服务
+							<!--<img src="img/xia.png" height="9px" width="12px"/>-->
+							<div class="boxsan">
+								<img src="./img/index_pic/客户服务.png" height="225px" width="149px"
+									style="float: left; margin-top: 10px; margin-left: 10px;" />
+							</div>
+						</li>
+						<li></li>
+						<li>网站导航
+							<!--<img src="img/xia.png" height="9px" width="12px"/>-->
+							<div class="boxsi">
+								<img src="./img/index_pic/网站导航.png" height="171px" width="1170px"
+									style="float: left; margin-top: 5px;" />
+							</div>
+						</li>
+						<li></li>
+						<li>手机京东
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+        <div class="header">
+			<div class="center">
+				<!-- <div class="logo"></div> -->
+				<div class="search">
+					<input type="text" name="ipt" placeholder="办公椅" />
+					<i></i>
+					<div class="button">
+						<img src="./img/index_pic/search.png" style="float: left; margin-top: 5px; margin-left: 9px;" />
+					</div>
+				</div>
+				<div class="car">
+					<i><img src="./img/index_pic/购物车.png" height="16px" width="16px" /></i>
+					<span>我的购物车<sup><b>0</b></sup></span>
+					<div class="header_gwc">
+						<div class="car_empty">
+							<i class="cart_empty_img"></i>
+							购物车中还没有商品，赶紧选购吧！
+						</div>
+					</div>
+				</div>
+				<div class="hot">
+					<p>童装超值购</p>
+					<p>时令生鲜</p>
+					<p>辣妈节</p>
+					<p>200减100</p>
+					<p>文具满减</p>
+					<p>家居礼品</p>
+					<p>家装爆品</p>
+					<p>爆款5折</p>
+					<p>Apple</p>
+				</div>
+				<div class="header-nav">
+					<ul>
+						<li>
+							<p>秒杀</p>
+							<p>优惠券</p>
+							<p>PLUS会员</p>
+							<p>闪购</p>
+						</li>
+						<li></li>
+						<li>
+							<p>拍卖</p>
+							<p>京东时尚</p>
+							<p>京东超市</p>
+							<p>京东生鲜</p>
+						</li>
+						<li></li>
+						<li>
+							<p>海囤全球</p>
+							<p>京东金融</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+        <div class="main clearfix">
+            <div class="main_center">
+                <!-- 左 -->
+                <div class="preview_wrap">
+                    <div class="cloth">
+                        <img src="./img/gwc/cloth.jpg" alt="" style="display: block;" class="cloth01 big_pic_one">
+                        <img src="./img/gwc/5.jpg" alt="" class="cloth01 big_pic_two">
+                        <img src="./img/gwc/7.jpg" alt="" class="cloth01 big_pic_three">
+                        <img src="./img/gwc/8.jpg" alt="" class="cloth01 big_pic_four">
+                        <img src="./img/gwc/9.jpg" alt="" class="cloth01 big_pic_five">
+                        <!-- 小盒子 -->
+                        <div class="cloth_move"></div>
+                    </div>
+                    <!-- 展示商品 -->
+                    <!-- <div class="cloth_bigbox">
+                        <img src="./img/gwc/01.jpg" alt="" style="display:block;">
+                        <img src="./img/gwc/02.jpg" alt="">
+                        <img src="./img/gwc/03.jpg" alt="">
+                        <img src="./img/gwc/04.jpg" alt="">
+                        <img src="./img/gwc/05.jpg" alt="">
+                    </div> -->
+                    <!--各角度展示衣服-->
+                    <div class="cloth_list">
+                        <a href="#javascript:" class="cloth_forward">
+                            <i class="prev"></i>
+                        </a>
+                        <a href="#javascript:" class="cloth_next">
+                            <i class="right_arrow"></i>
+                        </a>
+                        <div class="cloth_tab">
+                            <ul>
+                                <li class="img_hover  min_img01">
+                                    <img src="./img/gwc/1.jpg" alt="" class="small_pic_one">
+                                </li>
+                                <li class="min_img01">
+                                    <img src="./img/gwc/2.jpg" alt="" class="small_pic_two">
+                                </li>
+                                <li class="min_img01">
+                                    <img src="./img/gwc/3.jpg" alt="" class="small_pic_three">
+                                </li>
+                                <li class="min_img01">
+                                    <img src="./img/gwc/4.jpg" alt="" class="small_pic_four">
+                                </li>
+                                <li class="min_img01">
+                                    <img src="./img/gwc/6.jpg" alt="" class="small_pic_five">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- 中 -->
+                <div class="item_wrap clearfix">
+                    <div class="sku_name">
+                        
+                        茵曼2019夏装新款圆领文艺复古小清新收腰显瘦中长款A字连衣裙女【1892104108】 淡灰色 S                
+                    </div>
+					<div class="news">#2件8折/3件7折#艺术优雅系列</div>
+					<div class="sp_js">
+                    <div class="summary">
+                        <div class="summer_price">
+                            <span>京东价</span>
+                            <div class="summer_price_right">
+                                <div class="price">
+                                    <span style="font-size:16px;">￥</span>
+                                    <span id="price">299.00</span>
+                                    <a href="javascript:">降价通知</a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="summary_top"></div>
+                    </div>
+					<div class="summary_bot"></div>
+				</div>
+                    <!-- 变 -->
+                    <div class="summary_change clearfix">
+                        <div class="change_add">
+                            <div class="ipt_wrap">
+                                <input type="text" value="1" id="buy_num">
+                                <a href="javascript:;" class="num_add">+</a>
+                                <a href="javascript:;" class="num_remove">-</a>
+                            </div>
+                        </div>
+                        <div class="add_cart">加入购物车</div>
+                    </div>
+                </div>
+                <!-- 右 -->
+                <div class="track">
+                    <img src="./img/gwc/look.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/gwcNR.js"></script>
+<script src="./js/gwc.js"></script>
+
+</html>

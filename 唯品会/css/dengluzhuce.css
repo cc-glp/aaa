@@ -1,0 +1,422 @@
+
+.wrap {
+    width: 100%;
+    background: white;
+    overflow: hidden;
+    font-size: 16px;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+.top {
+    width: 100%;
+    height: 100px;
+}
+
+.logo {
+    width: 125px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(https://member-ssl.vipstatic.com/img/passport/sprites-hash-6954197b.png?5a6693d5);
+    background-position: -308px -57px;
+}
+
+.other {
+    width: 304px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(https://member-ssl.vipstatic.com/img/passport/sprites-hash-6954197b.png?5a6693d5);
+    background-position: 0 0;
+}
+
+.middle {
+    width: 100%;
+    height: 650px;
+    padding: 50px 0;
+    background: url(https://a.vpimg2.com/upload/flow/2019/01/29/88/15487540172274.jpg) top center no-repeat;
+}
+
+.foot {
+    width: 100%;
+    height: 80px;
+}
+
+.foot p {
+    height: 100%;
+    text-align: center;
+    line-height: 80px;
+    font-size: 13px;
+}
+
+.center {
+    width: 1000px;
+    height: 100%;
+    position: relative;
+    left: 50%;
+    margin-left: -500px;
+}
+
+.login {
+    width: 360px;
+    position: absolute;
+    right: 0;
+    background: white;
+    display: block;
+}
+
+.log_top {
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 0 30px;
+}
+
+.log_top div {
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.log_top div:nth-child(1) {
+    color: #f10180;
+}
+
+.log_top div:hover {
+    color: #f10180 !important;
+}
+
+.log_img {
+    height: 230px;
+}
+
+.log_id {
+    height: 280px;
+    padding: 0 30px;
+    padding-top: 40px;
+    display: none;
+}
+
+.log_foot {
+    height: 120px;
+    padding: 30px;
+}
+
+.img {
+    width: 100%;
+    height: 192px;
+    position: relative;
+    margin-top: 50px;
+}
+
+.img:hover .img1 {
+    left: 25px;
+}
+
+.img:hover .img2 {
+    display: block;
+}
+
+.img1 {
+    width: 172px;
+    height: 172px;
+    padding: 11px;
+    background: url(https://passport.vip.com/qrLogin/getQrImage?qrToken=10000-9a0bc09cf2a747d7af5fd8c812096c92) 11px center no-repeat;
+    border: 1px solid #f0f0f0;
+    position: absolute;
+    left: 94px;
+    top: 10px;
+    transition: all 0.5s;
+}
+
+.img2 {
+    width: 120px;
+    height: 192px;
+    background: url(https://member-ssl.vipstatic.com/img/passport/sprites-hash-6954197b.png?131e7010);
+    background-position: 0 -104px;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    animation: showimg 0.3s ease 0.4s forwards normal;
+    display: none;
+    opacity: 0;
+}
+
+@keyframes showimg {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.log_img p {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.log_img p span {
+    color: red;
+}
+.log_foot{
+    padding-right: 30px;
+    padding-left: 30px;
+}
+.wx_logo {
+    position: relative;
+    z-index: 1;
+    padding-top: 1px;
+    padding-bottom: 37px;
+}
+
+.wx_logo:after {
+    content: '';
+    width: 120px;
+    height: 0;
+    position: absolute;
+    top: 19px;
+    left: 0;
+    border-top: 1px solid #f0f0f0;
+}
+
+.wx_logo:before {
+    content: '';
+    width: 120px;
+    height: 0;
+    position: absolute;
+    top: 19px;
+    right: 0;
+    border-top: 2px solid #f0f0f0;
+}
+
+.wx_logo div {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 130px;
+    background: url(https://member-ssl.vipstatic.com/img/passport/sprites-hash-6954197b.png?131e7010);
+    background-position: -352px -161px;
+}
+
+.log_foot ul {
+    width: 300px;
+    height: 24px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.log_foot ul li {
+    float: left;
+    position: relative;
+    padding-right: 5px;
+    padding-left: 10px;
+    line-height: 24px;
+}
+
+.id,
+.pass,
+.reg_main>div {
+    width: 254px;
+    height: 38px;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #b2b2b2;
+    border-radius: 3px;
+    padding: 3px;
+    padding-left: 42px;
+    position: relative;
+}
+
+.id input,
+.pass input,
+.reg_main>div input {
+    border: none;
+    font-size: 14px;
+    width: 100%;
+    height: 100%;
+}
+
+.id i,
+.pass i,
+.reg_main i {
+    display: block;
+    background: url(https://member-ssl.vipstatic.com/img/passport/sprites-hash-6954197b.png?131e7010);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 11.5px;
+    left: 11.5px;
+}
+
+.id i {
+    background-position: -468px -161px;
+}
+
+.pass i {
+    background-position: -396px -161px;
+}
+
+.tip {
+    height: 15px;
+    margin: 6px auto;
+    color: transparent;
+    position: relative;
+}
+
+.tip1 {
+    width: 100%;
+    height: 110%;
+    position: absolute;
+    background: white;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.rem1,
+.rem2 {
+    width: 19px;
+    height: 16px;
+    background: url(https://bootstrap.vipstatic.com/img/ui/sprite.png?d9eadd17);
+    background-position: -48px 0;
+    position: relative;
+    float: left;
+    top: 2px;
+}
+
+.rem1:hover {
+    background-position: -24px -21px;
+}
+
+.rem2 {
+    display: none;
+    background-position: -24px 0;
+}
+
+.rember span:nth-of-type(2) {
+    position: relative;
+    left: 120px;
+}
+
+.btn {
+    background-color: #f43499;
+    border: 1px solid #f10180;
+    border-radius: 3px;
+    width: 300px;
+    height: 46px;
+    margin-top: 30px;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.regist {
+    width: 360px;
+    position: absolute;
+    right: 0;
+    border-radius: 2px;
+    background-color: #fff;
+    display: none;
+}
+
+.reg_ipt_2 {
+    width: 158px !important;
+}
+
+.phone {
+    display: block;
+    position: absolute;
+    top: 153px;
+    right: 30px;
+    width: 82px;
+    height: 45px;
+    border: 1px solid #d0d0d0;
+    color: #999;
+    background: #d0d0d0;
+    cursor: not-allowed;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 45px;
+    transition: all 0.3s;
+}
+
+.reg_main {
+    padding: 30px;
+}
+
+.reg_top {
+    padding-right: 30px;
+    padding-left: 30px;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #e0e0e0;
+    overflow: hidden;
+}
+.c-register-switch-login {
+    float: right;
+    font-size: 14px;
+}
+.u-text-highlight {
+    color: #f10180;
+}
+.reg_now {
+    width: 300px;
+    height: 42px;
+    border: 1px solid #f10180;
+    background-color: #f43499;
+    border-color: #f43499;
+    font-family: "\5FAE\8F6F\96C5\9ED1", Arial, tahoma, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    line-height: 42px;
+    cursor: pointer;
+    border-radius: 3px;
+    color: white;
+    font-weight: 700;
+    margin: 10px auto;
+}
+
+.text {
+    display: block;
+}
+
+.text>p:nth-child(1) {
+    float: left;
+}
+
+.reg_ipt_1 i {
+    background-position: -420px -161px;
+}
+
+.reg_ipt_2 i {
+    background-position: -444px -161px;
+}
+
+.reg_ipt_3 i {
+    background-position: -396px -161px;
+}
+
+.reg_ipt_4 i {
+    background-position: -396px -161px;
+}
+
+.turn_to_login {
+    color: #f10180;
+    cursor: pointer;
+}
+
+.turn_to_regist:hover {
+    color: #f10180;
+}
